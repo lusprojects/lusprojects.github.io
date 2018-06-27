@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- PAGE settings -->
+    <link rel="icon" href="">
+    <title>LU Server Projects</title>
+    <!-- CSS dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="neon.css" type="text/css"> </head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
+        <div class="container">
+            <a class="navbar-brand" href="#home" style="font-size: 200%;">LUSP</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse text-center" id="navbar2SupportedContent" style="font-size: 130%;">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servers">Servers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#development-resources">Development Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="home" class="py-5 text-center">
+        <div class="container" style="margin-top: 80px;">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-3 text-capitalize">LU Server Projects</h1>
+                    <p class="lead text-muted">Saving Imagination for All</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="faqs" class="py-4">
+        <div class="container">
+            <h2>FAQs</h2>
+            <hr>
+            <h3>What are LU Server Projects?</h3>
+            <p> This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in
+                reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans. </p>
+            <h3>How did it all start?</h3>
+            <p> Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these
+                captures. Not soon thereafter, the community began to overhype the little that was available in this implementation, and due to various reasons multiple fractures developed among the community. Multiple groups formed to work on furthering
+                the understanding and implementation of LU servers, and through the formation, dissolution, and consolidation of these projects, the current major projects have come in to being, as well as paving the way for other experimental utilities
+                and implementations. </p>
+            <h3>Why can't everyone join forces and work on one project?</h3>
+            <p>There are multiple reasons for this, including:</p>
+            <ul>
+                <li>Brook's Law, that is, "adding more developers to an already late project won't make it go any faster". It takes time to get people up to speed on a different set of code, a different work environment, and so on. In the end, it's possible
+                    that more resources would be spent consolidating than would be gained by a merger</li>
+                <li>The use of different programming languages entirely</li>
+                <li>Differing ideologies and specific goals of each project</li>
+                <li>Sadly, there are still lingering interpersonal issues amoung some members of the development community as well</li>
+            </ul>
+            <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration amoung the various teams in understanding the LU systems (for example,
+                through the public documentation), building utilities, and discussing optimal implementation approaches. </p>
+            <h3>What's taking so long?</h3>
+            <p>Based on a previous comment by LCDR, this is probably best summed up as follows</p>
+            <ul>
+                <li>At the start, absolutely nothing was known about the client, the networking protocol, or much about LU's systems in general. A significant amount of reverse engineering on the client and captured network packets has been needed to be done,
+                    and even now there's still a lot that we don't know, and we're constantyly working to learn more about LU's increadibly complex systems.</li>
+                <li>Everything is being built from the ground up. The only things we can use are the RakNet networking library that LU uses, some database libraries, and other extremely generic utilities that are more for ease of programming than anything.</li>
+                <li>There's only a few people working on it, and while they have a fair amount of software development experience, many are hobbyists or are still in school. On top of that, no one is working on this full-time, and sadly personal issues and
+                    general lack of available time is common.</li>
+            </ul>
+            <h3>How can I play LU right now?</h3>
+            <p>At this time, the best you can do would be to run the rudimentary LUNI Server (as many call it, a "walking simulator"). The easiest option is using 0.5.1:</p>
+            <ol>
+                <li>Download a <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">LEGO Universe Client</a></li>
+                <li>Download <a href="http://luniserver.com/download/">LUNI 0.5.1 (Release)</a></li>
+                <li>Unzip the two files</li>
+                <li>Go to your Client, \Lego Universe\client</li>
+                <li>Open Boot.cfg with Notepad(++)</li>
+                <li>Change AUTHSERVERIP=0: to localhost</li>
+                <li>Open the LUNI folder</li>
+                <li>Start "Luniserver"</li>
+                <li>Start Lego Universe \Lego Universe\client -&gt; legouniverse</li>
+                <li>Type in any Username or Password</li>
+            </ol>
+            <p>Alternatively,
+                <a href="https://github.com/LUNIServer/UniverseServer">version 0.8 is available</a> with some slight improvements, but the install process is advanced and generally unsupported. Please note that the LUNI project in general is NOT active,
+                is unsupported, and will likely be removed due to a number of various issues (namely it is poorly written, complex to use, and barely useful). In the future it will be preferred to simply use one of the hosted server projects, and ideally
+                there will be other options made available for individual usage.</p>
+            <h3>What can I do to help?</h3>
+            <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
+                (either via the original
+                <a href="#">Google Docs</a> or the
+                <a href="#">ReadTheDocs site</a>). Contributions to the documentation of any kind (through additional client or network reverse engineering, systems documentation, typo fixes, or anything else) are also helpful and are always appreciated.
+                If you become comfortable with how LU servers operate and show competance in your development skills, more established projects may also be willing to take you on at that time (generally by invitation). </p>
+            <p> Otherwise, your kind words and encouragement do wonders to keep all the developers encouraged to keep working at their hardest to bring back the game as close as possible to the original experience. </p>
+        </div>
+    </div>
+    <div id="servers" class="py-4">
+        <div class="container">
+            <h2>Servers</h2>
+            <hr>
+            <h3>Hosted</h3>
+            <div class="card-deck mx-auto" style="margin-bottom: 30px;">
+                <div class="card">
+                    <h4 class="card-header"> Darkflame Universe (DLU) </h4>
+                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Alpha 2 Prep</li>
+                        <li class="list-group-item">Language: C++</li>
+                        <li class="list-group-item">Accepting Developers: No</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">Twitter</a>
+                        <a href="#" class="card-link">Discord</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card-header"> LCDR Universe (LCDRU) </h4>
+                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Alpha 1</li>
+                        <li class="list-group-item">Language: Python</li>
+                        <li class="list-group-item">Accepting Developers: No</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">Twitter</a>
+                        <a href="#" class="card-link">Discord</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card-header"> LU Reborn (LUR) </h4>
+                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Pre-Alpha</li>
+                        <li class="list-group-item">Language: C++</li>
+                        <li class="list-group-item">Accepting Developers: Yes</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">Twitter</a>
+                        <a href="#" class="card-link">Discord</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card-header"> JALUS (Just Another LU Server) </h4>
+                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Rolling Pre-Alpha</li>
+                        <li class="list-group-item">Language: C++</li>
+                        <li class="list-group-item">Accepting Developers: Yes</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">Twitter</a>
+                        <a href="#" class="card-link">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <h3>Open Source</h3>
+            <div class="card-columns mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> PyLUS </h4>
+                        <div class="card-text"> Simple, modular, extensible, event-driven server </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Experimental</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LUPvP </h4>
+                        <div class="card-text"> Event-driven PvP server </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Experimental</li>
+                        <li class="list-group-item">Language: C++.NET</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                        <a href="#" class="card-link">Discord</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LUJS </h4>
+                        <div class="card-text"> Event-driven NodeJS server </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Experimental</li>
+                        <li class="list-group-item">Language: JavaScript</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Imagination Server </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Inactive</li>
+                        <li class="list-group-item">Language: C#</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> WLUS </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Experimental</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LWO Servers </h4>
+                        <div class="card-text"> Alpha Servers </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Experimental</li>
+                        <li class="list-group-item">Language: C++</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">lwoAuth GitHub</a>
+                        <a href="#" class="card-link">lwoWorld GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="development-resources" class="py-4">
+        <div class="container">
+            <h2>Development Resources</h2>
+            <hr>
+            <div class="card-columns mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LU Systems Documentation </h4>
+                        <div class="card-text"> Packet Structures, File Structures, and Game Mechanics Documentation </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: English, LCDR Structure Definition Format, RST</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Original Google Docs</a>
+                        <a href="#" class="card-link">RTD Port</a>
+                        <a href="#" class="card-link">RTD GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LU Explorer </h4>
+                        <div class="card-text"> LU Game Data Explorer </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: HTML/TypeScript (AngularJS)</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> RakNet </h4>
+                        <div class="card-text"> LU's Networking Library (version 3.25) </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Archive</li>
+                        <li class="list-group-item">Language: C++</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">3.25 Download</a>
+                        <a href="#" class="card-link">Website</a>
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Pyraknet </h4>
+                        <div class="card-text"> Python RakNet Port </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">BitBucket</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LCDR Utils </h4>
+                        <div class="card-text"> LU File and Packet Utilities </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">BitBucket</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Node RakNet </h4>
+                        <div class="card-text"> NodeJS RakNet Port </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: JavaScript</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> JALUP </h4>
+                        <div class="card-text"> LU Patcher </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Archive</li>
+                        <li class="list-group-item">Language: Java</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Client GitHub</a>
+                        <a href="#" class="card-link">Server GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Darwin's Nifskope Port </h4>
+                        <div class="card-text"> Modified version of Nifskope to work properly with LU nif files </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Archive</li>
+                        <li class="list-group-item">Language: C/C++</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Assembly </h4>
+                        <div class="card-text"> LU Server Common Library </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: C/C++</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Paradox </h4>
+                        <div class="card-text"> LU File Format Development Toolkit </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: C/C++</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LU Res </h4>
+                        <div class="card-text"> Preprocessed LU Game Data for Web </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> LU HAL APIs </h4>
+                        <div class="card-text"> XML and JSON HAL APIs for Internal Game Data </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: JSON/XML</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">LU JSON HAL Browser</a>
+                        <a href="#" class="card-link">LU HAL Browser Port GitHub</a>
+                        <a href="#" class="card-link">LU JSON GitHub</a>
+                        <a href="#" class="card-link">LU XML GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> PyFlower </h4>
+                        <div class="card-text"> LUZ Editor </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Archive</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> PkLib </h4>
+                        <div class="card-text"> LUZ Editor </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: Active Development</li>
+                        <li class="list-group-item">Language: Python</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:180px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;
+        <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+    </pingendo>
+    
+    <script>
+        function navigate() {
+            var hash = $(this).attr('href');
+            $('html,body').animate({
+                'scrollTop': $(hash).offset().top
+            }, 1000);
+            $('.active').removeClass('active');
+            var asr = $('#active-sr').remove();
+            var active = $('[href="' + hash + '"]');
+            active.append(asr);
+            active.addClass('active');
+        }
+
+        $('nav a').click(navigate);
+        try {
+            navigate($('[href="' + window.location.hash + '"]'));
+        } catch(e){}
+    </script>
+</body>
+
+</html>
