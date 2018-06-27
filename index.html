@@ -10,6 +10,14 @@
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
+    <style>
+        .card-header:first-child {
+            height: 3.5em;
+        }
+        #img_lur:hover {
+            filter: drop-shadow(0px 0px 1em rgba(0,200,244,0.5));
+        }
+    </style>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
         <div class="container">
@@ -142,16 +150,17 @@
                 </div>
                 <div class="card">
                     <h4 class="card-header"> LU Reborn (LUR) </h4>
-                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <img id="img_lur" class="card-img-middle" onclick="window.location='https://lureborn.org/'" src="https://assets.lureborn.org/logo/white-F6F6F6.png" alt="Card image cap">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Status: Pre-Alpha</li>
                         <li class="list-group-item">Language: C++</li>
                         <li class="list-group-item">Accepting Developers: Yes</li>
                     </ul>
                     <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">Twitter</a>
-                        <a href="#" class="card-link">Discord</a>
+                        <a href="https://lureborn.org" class="card-link">Website</a>
+                        <a href="https://twitter.com/lureborn" class="card-link">Twitter</a>
+                        <a href="https://discord.lureborn.org/" class="card-link">Discord</a>
+                        <a href="https://www.youtube.com/channel/UC5-Z2o03q0_HAz-2ntuOfDA" class="card-link">YouTube</a>
                     </div>
                 </div>
                 <div class="card">
@@ -453,9 +462,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:180px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;
-        <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
-    </pingendo>
     
     <script>
         function navigate() {
