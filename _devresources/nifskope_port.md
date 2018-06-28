@@ -4,5 +4,5 @@ status: Archive
 language: C/C++
 tag: General
 desc: Modified version of Nifskope to work properly with LU nif files
-links: [['GitHub', 'https://github.com/DarwinAnim8or/nifskope']]
+links: [['Linux Download', 'http://cache.lbbstudios.net/public/NifSkope/NifSkope_LU_Linux.zip'], ['Windows Download', 'http://cache.lbbstudios.net/public/NifSkope/NifSkope_LU_Win32.zip']]
 ---
