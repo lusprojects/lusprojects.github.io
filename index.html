@@ -12,7 +12,7 @@ title: LU Server Projects
     <link rel="icon" href="">
     <title>LU Server Projects</title>
     <!-- CSS dependencies -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
     <style>
         .card-header:first-child {
@@ -27,12 +27,12 @@ title: LU Server Projects
             margin: 1.25rem;
             white-space: nowrap;
         }
-        .btn {
+        button.active {
             background-color:#f1cd31;
             color:#111;
             font-weight:bold;
         }
-		button.active {
+		.btn {
 			background-color:rgba(51, 51, 51, 0.5);
             color:#f1cd31;
             font-weight:bold;
@@ -152,7 +152,7 @@ title: LU Server Projects
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
-                        <a href="{{ link[1] }}" class="card-link" target="_blank">{{ link[0] }}</a>
+                        <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>{{ link[0] }}</a>
                         {% endfor %}
                     </div>
                 </div>
@@ -172,7 +172,7 @@ title: LU Server Projects
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
-                        <a href="{{ link[1] }}" class="card-link" target="_blank">{{ link[0] }}</a>
+                        <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>{{ link[0] }}</a>
                         {% endfor %}
                     </div>
                 </div>
@@ -205,7 +205,7 @@ title: LU Server Projects
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
-                            <a href="{{ link[1] }}" class="card-link" target="_blank">{{ link[0] }}</a>
+                            <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>{{ link[0] }}</a>
                             {% endfor %}
                         </div>
                     </div>
