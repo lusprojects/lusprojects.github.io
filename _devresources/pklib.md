@@ -2,7 +2,7 @@
 name: PkLib
 status: Active Development
 language: Python
-tag: General Purpose
+tag: General
 desc: LUZ Editor
 links: [['GitHub', 'https://github.com/averysumner/pkLib']]
 ---
