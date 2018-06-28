@@ -94,18 +94,17 @@ title: LU Server Projects
                     general lack of available time is common.</li>
             </ul>
             <h3>How can I play LU right now?</h3>
-            <p>At this time, the best you can do would be to run the rudimentary LUNI Server (as many call it, a "walking simulator"). The easiest option is using 0.5.1:</p>
+            <p>There are several open source projects that you can download and setup, currently WLUS is the recommended one.</p>
             <ol>
                 <li>Download a <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">LEGO Universe Client</a></li>
-                <li>Download <a href="http://luniserver.com/download/">LUNI 0.5.1 (Release)</a></li>
-                <li>Unzip the two files</li>
-                <li>Go to your Client, \Lego Universe\client</li>
-                <li>Open Boot.cfg with Notepad(++)</li>
-                <li>Change AUTHSERVERIP=0: to localhost</li>
-                <li>Open the LUNI folder</li>
-                <li>Start "Luniserver"</li>
-                <li>Start Lego Universe \Lego Universe\client -&gt; legouniverse</li>
-                <li>Type in any Username or Password</li>
+                <li>Download <a href="https://www.dropbox.com/s/679za37lpeib5z2/WLUS.zip?dl=0">WLUS (Commit 304cd6b)</a></li>
+                <li>Download <a href="https://www.python.org/downloads/release/python-365/">Python 3.6.5</a></li>
+                <li>Run the python install and make sure you check "Add Python to PATH"</li>
+				<li>Extract WLUS and the LEGO Universe Client to seperate folders</li>
+                <li>Open command prompt and type "python -m pip install flask" and "python -m pip install passlib"</li>
+                <li>Double click __main__.py in the WLUS folder and open it with Python</li>
+                <li>Launch LEGO Universe</li>
+                <li>Login with the default username "wesley" and password "play"</li>
             </ol>
             <p>Alternatively,
                 <a href="https://github.com/LUNIServer/UniverseServer">version 0.8 is available</a> with some slight improvements, but the install process is advanced and generally unsupported. Please note that the LUNI project in general is NOT active,
@@ -130,7 +129,7 @@ title: LU Server Projects
 				{% for server in site.hosted %}
                 <div class="card">
                     <h4 class="card-header"> {{ server.name }} </h4>
-                    <img class="card-img-middle" src="{{ server.image_path }}" alt="Card image cap">
+                    <img class="card-img-middle" src="{{ server.image_path | absolute_url}}" alt="Card image cap">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Status: {{ server.status }}</li>
                         <li class="list-group-item">Language: {{ server.language }}</li>
