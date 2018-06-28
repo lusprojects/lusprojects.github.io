@@ -1,3 +1,7 @@
+---
+title: LU Server Projects
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -6,10 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- PAGE settings -->
     <link rel="icon" href="">
-    <title>LU Server Projects</title>
+	<title>LU Server Projects</title>
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
+	<style>
+		.card-header:first-child {
+			height: 3.5em;
+		}
+	</style>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
         <div class="container">
@@ -100,8 +109,8 @@
             <h3>What can I do to help?</h3>
             <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
                 (either via the original
-                <a href="#">Google Docs</a> or the
-                <a href="#">ReadTheDocs site</a>). Contributions to the documentation of any kind (through additional client or network reverse engineering, systems documentation, typo fixes, or anything else) are also helpful and are always appreciated.
+                <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">Google Docs</a> or the
+                <a href="http://lu-docs.readthedocs.io/en/latest/">ReadTheDocs site</a>). Contributions to the documentation of any kind (through additional client or network reverse engineering, systems documentation, typo fixes, or anything else) are also helpful and are always appreciated.
                 If you become comfortable with how LU servers operate and show competance in your development skills, more established projects may also be willing to take you on at that time (generally by invitation). </p>
             <p> Otherwise, your kind words and encouragement do wonders to keep all the developers encouraged to keep working at their hardest to bring back the game as close as possible to the original experience. </p>
         </div>
@@ -111,144 +120,44 @@
             <h2>Servers</h2>
             <hr>
             <h3>Hosted</h3>
+			
             <div class="card-deck mx-auto" style="margin-bottom: 30px;">
+				{% for server in site.hosted %}
                 <div class="card">
-                    <h4 class="card-header"> Darkflame Universe (DLU) </h4>
-                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+                    <h4 class="card-header"> {{ server.name }} </h4>
+                    <img class="card-img-middle" src="{{ server.image_path }}" alt="Card image cap">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Alpha 2 Prep</li>
-                        <li class="list-group-item">Language: C++</li>
-                        <li class="list-group-item">Accepting Developers: No</li>
+                        <li class="list-group-item">Status: {{ server.status }}</li>
+                        <li class="list-group-item">Language: {{ server.language }}</li>
+                        <li class="list-group-item">Accepting Developers: {{ server.accepting_devs }}</li>
                     </ul>
                     <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">Twitter</a>
-                        <a href="#" class="card-link">Discord</a>
+						{% for link in server.links %}
+                        <a href="{{ link[1] }}" class="card-link">{{ link[0] }}</a>
+						{% endfor %}
                     </div>
                 </div>
-                <div class="card">
-                    <h4 class="card-header"> LCDR Universe (LCDRU) </h4>
-                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Alpha 1</li>
-                        <li class="list-group-item">Language: Python</li>
-                        <li class="list-group-item">Accepting Developers: No</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">Twitter</a>
-                        <a href="#" class="card-link">Discord</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4 class="card-header"> LU Reborn (LUR) </h4>
-                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Pre-Alpha</li>
-                        <li class="list-group-item">Language: C++</li>
-                        <li class="list-group-item">Accepting Developers: Yes</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">Twitter</a>
-                        <a href="#" class="card-link">Discord</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4 class="card-header"> JALUS (Just Another LU Server) </h4>
-                    <img class="card-img-middle" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Rolling Pre-Alpha</li>
-                        <li class="list-group-item">Language: C++</li>
-                        <li class="list-group-item">Accepting Developers: Yes</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">Twitter</a>
-                        <a href="#" class="card-link">Discord</a>
-                    </div>
-                </div>
+				{% endfor %}
             </div>
             <h3>Open Source</h3>
             <div class="card-columns mx-auto">
+                {% for server in site.opensource %}
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title"> PyLUS </h4>
-                        <div class="card-text"> Simple, modular, extensible, event-driven server </div>
+                        <h4 class="card-title"> {{ server.name }} </h4>
+                        <div class="card-text"> {{ server.desc }} </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Experimental</li>
-                        <li class="list-group-item">Language: Python</li>
+                        <li class="list-group-item">Status: {{ server.status }}</li>
+                        <li class="list-group-item">Language: {{server.language}}</li>
                     </ul>
                     <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
+                        {% for link in server.links %}
+                        <a href="{{ link[1] }}" class="card-link">{{ link[0] }}</a>
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LUPvP </h4>
-                        <div class="card-text"> Event-driven PvP server </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Experimental</li>
-                        <li class="list-group-item">Language: C++.NET</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                        <a href="#" class="card-link">Discord</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LUJS </h4>
-                        <div class="card-text"> Event-driven NodeJS server </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Experimental</li>
-                        <li class="list-group-item">Language: JavaScript</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Imagination Server </h4>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Inactive</li>
-                        <li class="list-group-item">Language: C#</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> WLUS </h4>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Experimental</li>
-                        <li class="list-group-item">Language: Python</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LWO Servers </h4>
-                        <div class="card-text"> Alpha Servers </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Experimental</li>
-                        <li class="list-group-item">Language: C++</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">lwoAuth GitHub</a>
-                        <a href="#" class="card-link">lwoWorld GitHub</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -256,208 +165,50 @@
         <div class="container">
             <h2>Development Resources</h2>
             <hr>
-            <div class="card-columns mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LU Systems Documentation </h4>
-                        <div class="card-text"> Packet Structures, File Structures, and Game Mechanics Documentation </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: English, LCDR Structure Definition Format, RST</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Original Google Docs</a>
-                        <a href="#" class="card-link">RTD Port</a>
-                        <a href="#" class="card-link">RTD GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LU Explorer </h4>
-                        <div class="card-text"> LU Game Data Explorer </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: HTML/TypeScript (AngularJS)</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> RakNet </h4>
-                        <div class="card-text"> LU's Networking Library (version 3.25) </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Archive</li>
-                        <li class="list-group-item">Language: C++</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">3.25 Download</a>
-                        <a href="#" class="card-link">Website</a>
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Pyraknet </h4>
-                        <div class="card-text"> Python RakNet Port </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: Python</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">BitBucket</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LCDR Utils </h4>
-                        <div class="card-text"> LU File and Packet Utilities </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: Python</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">BitBucket</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Node RakNet </h4>
-                        <div class="card-text"> NodeJS RakNet Port </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: JavaScript</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> JALUP </h4>
-                        <div class="card-text"> LU Patcher </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Archive</li>
-                        <li class="list-group-item">Language: Java</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Client GitHub</a>
-                        <a href="#" class="card-link">Server GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Darwin's Nifskope Port </h4>
-                        <div class="card-text"> Modified version of Nifskope to work properly with LU nif files </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Archive</li>
-                        <li class="list-group-item">Language: C/C++</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Assembly </h4>
-                        <div class="card-text"> LU Server Common Library </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: C/C++</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Paradox </h4>
-                        <div class="card-text"> LU File Format Development Toolkit </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: C/C++</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LU Res </h4>
-                        <div class="card-text"> Preprocessed LU Game Data for Web </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> LU HAL APIs </h4>
-                        <div class="card-text"> XML and JSON HAL APIs for Internal Game Data </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: JSON/XML</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">LU JSON HAL Browser</a>
-                        <a href="#" class="card-link">LU HAL Browser Port GitHub</a>
-                        <a href="#" class="card-link">LU JSON GitHub</a>
-                        <a href="#" class="card-link">LU XML GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> PyFlower </h4>
-                        <div class="card-text"> LUZ Editor </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Archive</li>
-                        <li class="list-group-item">Language: Python</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> PkLib </h4>
-                        <div class="card-text"> LUZ Editor </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: Active Development</li>
-                        <li class="list-group-item">Language: Python</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
+			<div>
+				<ul class="list-inline">
+					<li class="list-inline-item"><button class="btn" onclick="searchForTag('Networking')">Networking</button></li>
+					<li class="list-inline-item"><button class="btn" onclick="searchForTag('Research')">Research</button></li>
+					<li class="list-inline-item"><button class="btn" onclick="showAll()">All</button></li>
+				</ul>
+			</div>
+			<div>
+				<div class="card-columns mx-auto">
+					{% for resource in site.devresources %}
+					<div class="card" data-tag="{{ resource.tag }}">
+						<div class="card-body">
+							<h4 class="card-title"> {{ resource.name }} </h4>
+							<div class="card-text"> {{ resource.desc }} </div>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">Status: {{ resource.status }}</li>
+							<li class="list-group-item">Language: {{ resource.language }}</li>
+						</ul>
+						<div class="card-footer">
+							{% for link in resource.links %}
+							<a href="{{ link[1] }}" class="card-link">{{ link[0] }}</a>
+							{% endfor %}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			<div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:180px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;
-        <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
-    </pingendo>
     
     <script>
+		function searchForTag(tag)
+		{
+			$("[data-tag]:not([data-tag~='"+tag+"'])").hide();
+			$("[data-tag~='"+tag+"']").show();
+		}
+		function showAll()
+		{
+			$("[data-tag]").show();
+		}
         function navigate() {
             var hash = $(this).attr('href');
             $('html,body').animate({
