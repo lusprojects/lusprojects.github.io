@@ -151,6 +151,7 @@ title: LU Server Projects
                         <li class="list-group-item">Status: {{ server.status }}</li>
                         <li class="list-group-item">Language: {{ server.language }}</li>
                         <li class="list-group-item">Accepting Developers: {{ server.accepting_devs }}</li>
+						<li class="list-group-item">Active Developers: {{ server.devs }}</li>
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
@@ -171,6 +172,7 @@ title: LU Server Projects
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Status: {{ server.status }}</li>
                         <li class="list-group-item">Language: {{server.language}}</li>
+						<li class="list-group-item">Active Developers: {{ server.devs }}</li>
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
@@ -204,7 +206,7 @@ title: LU Server Projects
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Status: {{ resource.status }}</li>
                             <li class="list-group-item">Language: {{ resource.language }}</li>
-
+							<li class="list-group-item">Author: {{ resource.author }}</li>
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}

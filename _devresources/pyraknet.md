@@ -5,4 +5,5 @@ language: Python
 tag: Networking
 desc: Python RakNet Port
 links: [['BitBucket', 'https://bitbucket.org/lcdr/pyraknet/', 'fab fa-bitbucket']]
+author: lcdr
 ---
