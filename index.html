@@ -122,8 +122,10 @@ title: LU Server Projects
                 <li>Extract WLUS and the LEGO Universe Client to seperate folders</li>
                 <li>Open command prompt and type "python -m pip install flask" and "python -m pip install passlib"</li>
                 <li>Double click __main__.py in the WLUS folder and open it with Python</li>
+				<li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to '127.0.0.1'</li>
                 <li>Launch LEGO Universe</li>
                 <li>Login with the default username "wesley" and password "play"</li>
+				<li>Chat commands for this version of WLUS can be found <a href="https://github.com/wesleyd1124/WLUS/tree/304cd6b9ff7a1af92c18c41eec569934852b4545">here</a></li>
             </ol>
             <h3>What can I do to help?</h3>
             <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
@@ -202,6 +204,7 @@ title: LU Server Projects
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Status: {{ resource.status }}</li>
                             <li class="list-group-item">Language: {{ resource.language }}</li>
+
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
