@@ -1,0 +1,24 @@
+what:
+  q: What are LU Server Projects?
+  a: This community of projects aims to provide the capability to play the
+    LEGO&reg; Universe MMO, shuttered in February 2012 after a roughly one year
+    run, through emulating the original servers. This is done thanks to the hard
+    work of many fans in reverse engineering packet captures and the game client,
+    and also opens up the possibility for further creativity through
+    customization by dedicated fans.
+where:
+  q: Where can I get in touch with other fans, developers, and community members?
+    Where can I ask questions
+  a: Please see <a href="#contact-community">Community/Contact</a>
+start:
+  q: How did it all start?
+  a: Around the time of the games closure, Pwjones was able to capture a
+    significant volume of packets from the live LU servers, which were then able
+    to be decrypted by Humanoid, who also wrote the very first server prototype
+    playing back these captures. Not soon thereafter, the community began to
+    overhype the little that was available in this implementation, and due to
+    various reasons multiple fractures developed among the community. Multiple
+    groups formed to work on furthering the understanding and implementation of
+    LU servers, and through the formation, dissolution, and consolidation of
+    these projects, the current major projects have come in to being, as well as
+    paving the way for other experimental utilities and implementations.
