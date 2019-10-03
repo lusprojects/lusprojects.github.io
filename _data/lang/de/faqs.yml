@@ -21,7 +21,7 @@ join-forces:
   q: "Warum können nicht alle am selben Projekt arbeiten?"
   a: "Dafür gibt es mehrere Gründe, unter anderem:"
   r:
-    brook: "Brooks Gesetz, das besagt, dass \"mehr Entwickler zu einem verspäteten Projekt hinzuzufügen, wird es nicht schneller machen\". Es braucht Zeit Leute in neuen Code, eine neue Umgebung, usw. einzuarbieten. Am Ende ist es möglich, dass mehr Ressources dafür draufgehen die Projekte zu vereinen, als dabei gewonnen würde"
+    brook: "Brooks Gesetz, das besagt, dass \"mehr Entwickler zu einem verspäteten Projekt hinzuzufügen, wird es nicht schneller machen\". Es braucht Zeit Leute in neuen Code, eine neue Umgebung, usw. einzuarbeiten. Am Ende ist es möglich, dass mehr Ressources dafür draufgehen die Projekte zu vereinen, als dabei gewonnen würde"
     fun: "Einzelpersonen wollen selber versuchen einen Server zu bauen: Zum Spaß oder um Erfahrung zu sammeln"
     goals: "Projekte vertreten unterschiedliche Ideologien oder haben verschiedene Ziele"
     issues: "Leider gibt es auch immer mal wieder zwischenmenschliche Probleme innerhalb der Entwickler-Community"
@@ -29,29 +29,28 @@ join-forces:
   f: "All das heißt trotzdem nicht, dass die Projekte überhaupt nicht zusammenarbeiten. Tatsächlich eher das Gegenteil, denn es gibt eine große Menge an Kommunikation und Zusammenarbeit zwischen den verschiedenen Teams dabei, die Systeme von LU zu verstehen (etwa durch die öffentliche Dokumentation), Tools zu entwickeln und optimale Implementierungsansätze zu diskutieren."
 play:
   q: "Wie kann ich jetzt LU spielen?"
-#  a: "There are several open source projects that you can download and setup. Currently WLUS is the recommended one."
-#  steps:
-#    client:
-#      link: "LEGO Universe Client"
-#      post: ~
-#      pre: "Download a"
-#    extract: "Extract WLUS and the LEGO Universe Client to seperate folders"
-#    launch: "Launch LEGO Universe"
-#    login: "Login with the default username \"wesley\" and password \"play\""
-#    run: "Double click main.exe in the WLUS folder"
-#    server:
-#      post: ~
-#      pre: Download
-#    set-auth: "Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)"
+  a: "Es gibt mehrere Quelloffene Projekte die du herunterladen und aufsetzen kannst. Momentan empfehlen wir am WLUS."
+  steps:
+    client:
+      pre: "Lade den"
+      link: "LEGO Universe Client"
+      post: "herunter"
+    extract: "Entpacke WLUS und den LEGO Universe Client in unterschiedliche Ordner"
+    launch: "Starte LEGO Universe"
+    login: "Melde dich mit dem Nutzernamen \"wesley\" und passwort \"play\" an"
+    run: "Starte main.exe im WLUS-Ordner mit einem Doppelklick"
+    server:
+      pre: "Lade"
+      post: "herunter"
+    set-auth: "Öffne boot.cfg im LEGO Universe Client Ordner und ändere AUTHSERVERIP zu 'AUTHSERVERIP=0:localhost,' (Abhängig vom gewählten Client kann das bereits der Fall sein)"
 start:
   q: "Wie hat das alles angefangen?"
-#  a: "Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these captures. Not soon thereafter, the community began to overhype the little that was available in this implementation, and due to various reasons multiple fractures developed among the community. Multiple groups formed to work on furthering the understanding and implementation of LU servers, and through the formation, dissolution, and consolidation of these projects, the current major projects have come in to being, as well as paving the way for other experimental utilities and implementations."
+  a: "Kurz vor der Schließung des Spiels war Pwjones in der Lage eine größere Menge an Paketen des aktiven Spiels mitzuschneiden, die dann von humanoid entschlüsselt werden konnten, der auch den allerersten Server-Prototy erstellt hat, welcher nur diese Mitschnitte wiedergab. Nicht viel später hat die Community angefangen viel Hype um diese geringfügige Implementierung zu machen und aus verschieden Gründe haben sich mehrere Risse in dieser Community gebildet. Mehrere Gruppen haben sich gebildet um das Verständnis und die Implementierung von LU Servern weiterzutreiben und aus der Gründung, Auflösung und Konsolidierung dieser Projekte sind die aktuellen großen Projekte entstanden, aber auch der Weg für kleinere experimentelle Tools und Implementierungen freigeworden."
 what:
   q: "Was sind LU Server Projekte?"
-#  a: "This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans."
+  a: "Diese Sammlung von Projekten hat das gemeinschaftliche Ziel, das MMO LEGO® Universe, eingestellt im Februar 2012 nach nur etwa einen Jahr Laufzeit, durch Emulation der originalen Server erneut spielbar zu machen. Das ist möglich, dank der harten Arbeit vieler Fans, die Paket-Mitschnitte und den Spiel-Client analysieren und öffnet ausserdem die Möglichkeit sich durch weitere Anpassungen von treuen Fans kreativ weiterzuentwickeln."
 where:
   q: "Wo kann ich mich mit anderen Fans, Entwicklern und Community-Mitgliedern austauschen? Wo kann ich Fragen stellen?"
-#  a:
-#    link: Community/Contact
-#    post: ~
-#    pre: "Please see"
+  a:
+    pre: "Siehe auch"
+    post: ~

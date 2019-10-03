@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {% assign i18n = site.data.lang[page.lang] %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- PAGE settings -->
@@ -44,21 +45,21 @@
             <div class="collapse navbar-collapse text-center" id="navbar2SupportedContent" style="font-size: 130%;">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">{{ site.data.lang[page.lang].nav.home }}
-                            <span class="sr-only">({{ site.data.lang[page.lang].nav.current }})</span>
+                        <a class="nav-link" href="#home">{{ i18n.nav.home }}
+                            <span class="sr-only">({{ i18n.nav.current }})</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#faqs">{{ site.data.lang[page.lang].nav.faqs }}</a>
+                        <a class="nav-link" href="#faqs">{{ i18n.nav.faqs }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servers">{{ site.data.lang[page.lang].nav.servers }}</a>
+                        <a class="nav-link" href="#servers">{{ i18n.nav.servers }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#development-resources">{{ site.data.lang[page.lang].nav.dev-resources }}</a>
+                        <a class="nav-link" href="#development-resources">{{ i18n.nav.dev-resources }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact-community">{{ site.data.lang[page.lang].nav.community-contact }}</a>
+                        <a class="nav-link" href="#contact-community">{{ i18n.nav.community-contact }}</a>
                     </li>
                 </ul>
             </div>
@@ -76,64 +77,64 @@
     </div>
     <div id="faqs" class="py-4">
         <div class="container">
-            <h2>{{ site.data.lang[page.lang].nav.faqs }}</h2>
+            <h2>{{ i18n.nav.faqs }}</h2>
             <hr>
-            <h3>{{ site.data.lang[page.lang].faqs.what.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.what.a }}</p>
-            <h3>{{ site.data.lang[page.lang].faqs.where.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.where.a.pre }}
-            <a href="#contact-community">{{ site.data.lang[page.lang].faqs.where.a.link }}</a>
-            {{ site.data.lang[page.lang].faqs.where.a.post }}</p>
-            <h3>{{ site.data.lang[page.lang].faqs.start.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.start.a }}</p>
-            <h3>{{ site.data.lang[page.lang].faqs.join-forces.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.join-forces.a }}</p>
+            <h3>{{ i18n.faqs.what.q }}</h3>
+            <p>{{ i18n.faqs.what.a }}</p>
+            <h3>{{ i18n.faqs.where.q }}</h3>
+            <p>{{ i18n.faqs.where.a.pre }}
+            <a href="#contact-community">{{ i18n.nav.community-contact }}</a>
+            {{ i18n.faqs.where.a.post }}</p>
+            <h3>{{ i18n.faqs.start.q }}</h3>
+            <p>{{ i18n.faqs.start.a }}</p>
+            <h3>{{ i18n.faqs.join-forces.q }}</h3>
+            <p>{{ i18n.faqs.join-forces.a }}</p>
             <ul>
-                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.brook }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.langs }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.goals }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.fun }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.issues }}</li>
+                <li>{{ i18n.faqs.join-forces.r.brook }}</li>
+                <li>{{ i18n.faqs.join-forces.r.langs }}</li>
+                <li>{{ i18n.faqs.join-forces.r.goals }}</li>
+                <li>{{ i18n.faqs.join-forces.r.fun }}</li>
+                <li>{{ i18n.faqs.join-forces.r.issues }}</li>
             </ul>
-            <p>{{ site.data.lang[page.lang].faqs.join-forces.f }}</p>
-            <h3>{{ site.data.lang[page.lang].faqs.eta.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.eta.a }}</p>
+            <p>{{ i18n.faqs.join-forces.f }}</p>
+            <h3>{{ i18n.faqs.eta.q }}</h3>
+            <p>{{ i18n.faqs.eta.a }}</p>
             <ul>
-                <li>{{ site.data.lang[page.lang].faqs.eta.r.re }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.eta.r.dev }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.eta.r.people }}</li>
+                <li>{{ i18n.faqs.eta.r.re }}</li>
+                <li>{{ i18n.faqs.eta.r.dev }}</li>
+                <li>{{ i18n.faqs.eta.r.people }}</li>
             </ul>
-            <h3>{{ site.data.lang[page.lang].faqs.play.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.play.a }}</p>
+            <h3>{{ i18n.faqs.play.q }}</h3>
+            <p>{{ i18n.faqs.play.a }}</p>
             <ol>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.client.pre }}
-                  <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">{{ site.data.lang[page.lang].faqs.play.steps.client.link }}</a>
-                {{ site.data.lang[page.lang].faqs.play.steps.client.post }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.server.pre }}
+                <li>{{ i18n.faqs.play.steps.client.pre }}
+                  <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">{{ i18n.faqs.play.steps.client.link }}</a>
+                {{ i18n.faqs.play.steps.client.post }}</li>
+                <li>{{ i18n.faqs.play.steps.server.pre }}
                   <a href="https://github.com/wesleyd1124/WLUS/releases/tag/1.0">WLUS</a>
-                {{ site.data.lang[page.lang].faqs.play.steps.server.post }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.extract }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.run }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.set-auth }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.launch }}</li>
-                <li>{{ site.data.lang[page.lang].faqs.play.steps.login }}</li>
+                {{ i18n.faqs.play.steps.server.post }}</li>
+                <li>{{ i18n.faqs.play.steps.extract }}</li>
+                <li>{{ i18n.faqs.play.steps.run }}</li>
+                <li>{{ i18n.faqs.play.steps.set-auth }}</li>
+                <li>{{ i18n.faqs.play.steps.launch }}</li>
+                <li>{{ i18n.faqs.play.steps.login }}</li>
             </ol>
-            <h3>{{ site.data.lang[page.lang].faqs.help.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.help.a.pre }}
-                <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">{{ site.data.lang[page.lang].faqs.help.a.gdoc }}</a>
-                {{ site.data.lang[page.lang].faqs.help.a.mid-1 }}
-                <a href="http://lu-docs.readthedocs.io/en/latest/">{{ site.data.lang[page.lang].faqs.help.a.rtd }}</a>
-                {{ site.data.lang[page.lang].faqs.help.a.mid-2 }}
-                <a href="https://lusprojects.github.io">{{ site.data.lang[page.lang].faqs.help.a.lusp }}</a>
-            {{ site.data.lang[page.lang].faqs.help.a.post }}</p>
-            <p>{{ site.data.lang[page.lang].faqs.help.f }}</p>
+            <h3>{{ i18n.faqs.help.q }}</h3>
+            <p>{{ i18n.faqs.help.a.pre }}
+                <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">{{ i18n.faqs.help.a.gdoc }}</a>
+                {{ i18n.faqs.help.a.mid-1 }}
+                <a href="http://lu-docs.readthedocs.io/en/latest/">{{ i18n.faqs.help.a.rtd }}</a>
+                {{ i18n.faqs.help.a.mid-2 }}
+                <a href="https://lusprojects.github.io">{{ i18n.faqs.help.a.lusp }}</a>
+            {{ i18n.faqs.help.a.post }}</p>
+            <p>{{ i18n.faqs.help.f }}</p>
         </div>
     </div>
     <div id="servers" class="py-4">
         <div class="container">
-            <h2>{{ site.data.lang[page.lang].nav.servers }}</h2>
+            <h2>{{ i18n.nav.servers }}</h2>
             <hr>
-            <h3>{{ site.data.lang[page.lang].servers.hosted }}</h3>
+            <h3>{{ i18n.servers.hosted }}</h3>
 
             <div class="card-deck mx-auto" style="margin-bottom: 30px;">
                 {% for server in site.hosted %}
@@ -141,10 +142,10 @@
                     <h4 class="card-header"> {{ server.name }} </h4>
                     <img class="card-img-middle" src="{{ server.image_path | absolute_url}}" alt="Card image cap">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ server.status }}</li>
-                        <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{ server.language }}</li>
-                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.accepting-devs }}: {{ server.accepting_devs }}</li>
-                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.devs }}: {{ server.devs }}</li>
+                        <li class="list-group-item">{{ i18n.general.status }}: {{ server.status }}</li>
+                        <li class="list-group-item">{{ i18n.general.language }}: {{ server.language }}</li>
+                        <li class="list-group-item">{{ i18n.servers.accepting-devs }}: {{ server.accepting_devs }}</li>
+                        <li class="list-group-item">{{ i18n.servers.devs }}: {{ server.devs }}</li>
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
@@ -154,7 +155,7 @@
                 </div>
                 {% endfor %}
             </div>
-            <h3>{{ site.data.lang[page.lang].servers.open-source }}</h3>
+            <h3>{{ i18n.servers.open-source }}</h3>
             <div class="card-columns mx-auto">
                 {% for server in site.opensource %}
                 <div class="card">
@@ -163,12 +164,12 @@
                         <div class="card-text"> {{ server.desc }} </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ server.status }}</li>
-                        <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{server.language}}</li>
+                        <li class="list-group-item">{{ i18n.general.status }}: {{ server.status }}</li>
+                        <li class="list-group-item">{{ i18n.general.language }}: {{server.language}}</li>
                         {% if server.devs %}
-                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.devs }}: {{ server.devs }}</li>
+                        <li class="list-group-item">{{ i18n.servers.devs }}: {{ server.devs }}</li>
                         {% elsif server.author %}
-                        <li class="list-group-item">{{ site.data.lang[page.lang].general.author }}: {{ server.author }}</li>
+                        <li class="list-group-item">{{ i18n.general.author }}: {{ server.author }}</li>
                         {% endif %}
                     </ul>
                     <div class="card-footer">
@@ -183,13 +184,13 @@
     </div>
     <div id="development-resources" class="py-4">
         <div class="container">
-            <h2>{{ site.data.lang[page.lang].nav.dev-resources }}</h2>
+            <h2>{{ i18n.nav.dev-resources }}</h2>
             <hr>
             <div>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><button class="btn active" id="All_tag" data-tagbtn="1" onclick="showAll()">{{ site.data.lang[page.lang].dev-resources.tags.all }}</button></li>
-                    <li class="list-inline-item"><button class="btn" id="Research_tag" data-tagbtn="1" onclick="searchForTag('Research')">{{ site.data.lang[page.lang].dev-resources.tags.research }}</button></li>
-                    <li class="list-inline-item"><button class="btn" id="Networking_tag" data-tagbtn="1" onclick="searchForTag('Networking')">{{ site.data.lang[page.lang].dev-resources.tags.networking }}</button></li>
+                    <li class="list-inline-item"><button class="btn active" id="All_tag" data-tagbtn="1" onclick="showAll()">{{ i18n.dev-resources.tags.all }}</button></li>
+                    <li class="list-inline-item"><button class="btn" id="Research_tag" data-tagbtn="1" onclick="searchForTag('Research')">{{ i18n.dev-resources.tags.research }}</button></li>
+                    <li class="list-inline-item"><button class="btn" id="Networking_tag" data-tagbtn="1" onclick="searchForTag('Networking')">{{ i18n.dev-resources.tags.networking }}</button></li>
                 </ul>
             </div>
             <div>
@@ -201,9 +202,9 @@
                             <div class="card-text"> {{ resource.desc }} </div>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ resource.status }}</li>
-                            <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{ resource.language }}</li>
-                            <li class="list-group-item">{{ site.data.lang[page.lang].general.author }}: {{ resource.author }}</li>
+                            <li class="list-group-item">{{ i18n.general.status }}: {{ resource.status }}</li>
+                            <li class="list-group-item">{{ i18n.general.language }}: {{ resource.language }}</li>
+                            <li class="list-group-item">{{ i18n.general.author }}: {{ resource.author }}</li>
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
@@ -218,28 +219,28 @@
     </div>
     <div id="contact-community" class="py-4">
         <div class="container">
-            <h2>{{ site.data.lang[page.lang].nav.community-contact }}</h2>
+            <h2>{{ i18n.nav.community-contact }}</h2>
             <hr>
             <ul>
-                <li>{{ site.data.lang[page.lang].community.luch.pre }}<!--
+                <li>{{ i18n.community.luch.pre }}<!--
                 --><a href="https://discord.gg/NKry7cY"><!--
-                -->{{ site.data.lang[page.lang].community.luch.link }}<!--
+                -->{{ i18n.community.luch.link }}<!--
                 --></a><!--
-                -->{{ site.data.lang[page.lang].community.luch.post }}</li>
-                <li>{{ site.data.lang[page.lang].community.lusp.pre }}<!--
+                -->{{ i18n.community.luch.post }}</li>
+                <li>{{ i18n.community.lusp.pre }}<!--
                 --><a href="https://github.com/lusprojects/lusprojects.github.io"><!--
-                -->{{ site.data.lang[page.lang].community.lusp.link }}<!--
+                -->{{ i18n.community.lusp.link }}<!--
                 --></a><!--
-                -->{{ site.data.lang[page.lang].community.lusp.mid }}<!--
+                -->{{ i18n.community.lusp.mid }}<!--
                 --><a href="https://github.com/lusprojects/lusprojects.github.io/issues"><!--
-                -->{{ site.data.lang[page.lang].community.lusp.issues }}<!--
+                -->{{ i18n.community.lusp.issues }}<!--
                 --></a><!--
-                -->{{ site.data.lang[page.lang].community.lusp.post }}</li>
-                <li>{{ site.data.lang[page.lang].community.projects.pre }}<!--
-                --><a href="#servers">{{ site.data.lang[page.lang].nav.servers }}</a><!--
-                -->{{ site.data.lang[page.lang].community.projects.mid }}<!--
-                --><a href="#development-resources">{{ site.data.lang[page.lang].nav.dev-resources }}</a><!--
-                -->{{ site.data.lang[page.lang].community.projects.post }}</li>
+                -->{{ i18n.community.lusp.post }}</li>
+                <li>{{ i18n.community.projects.pre }}<!--
+                --><a href="#servers">{{ i18n.nav.servers }}</a><!--
+                -->{{ i18n.community.projects.mid }}<!--
+                --><a href="#development-resources">{{ i18n.nav.dev-resources }}</a><!--
+                -->{{ i18n.community.projects.post }}</li>
             </ul>
         </div>
     </div>
