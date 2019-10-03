@@ -1,0 +1,57 @@
+---
+eta:
+  q: "Warum dauert das so lange?"
+  a: "Angelehnt an einen Kommentar von LCDR, lauten die Gründe zusammengefasst etwa:"
+  r:
+    dev: "Alles muss von Grund auf neu erstellt werden. Einzig RakNet, die Netzwerkschnittstelle, die LU benutzt, einige Datenbank-Tools und sonstige sehr allgemeine Tools sind bereits verfügbar."
+    people: "Nur sehr wenige Personen arbeiten daran, und auch wenn diese einige Erfahrung in der Software-Entwicklung haben sind sie trotzdem noch Schüler oder beschäftigen sich nur in ihrer Freizeit mit LU. Niemand arbeitet in Vollzeit an einem Projekt, auch sind Zeitmangel und persönliche Unstimmigkeiten häufig."
+    re: "Am Anfang war über den Client, das Netzwerkprotokoll oder die allgemeine Architektur von LU nichts bekannt. Eine signifikante Menge an Reverse-Engineering des Client und der Pakete musste erledigt werden und es bleibt immer noch viel, dass wir nicht wissen. Dabei arbeiten wir dauerhaft daran, die unglaublich komplexen Systeme in LU nachzuvollziehen."
+help:
+  q: "Wie kann ich mithelfen?"
+  a:
+    gdoc: "Google Dokument"
+    lusp: "auf GitHub"
+    rtd: "Inoffiziellen ReadTheDocs Version"
+    pre: "Solltest du Erfahrung mit Software Entwicklung haben, kannst du versuchen zu einer der Quelloffenen Server oder Entwickler-Tools weiter unten beizutragen. Zu Anfang empfiehlt es sich über die LU System-Doku drüberzulesen (entweder im originalen"
+    mid-1: "oder der"
+    mid-2: "). Beiträge zu der Dokumentation (etwa durch zusätzliches Client/Netzwerk reverse-engineering, Dokumentation von Systemen, Schreibfehlerkorrekturen oder sonstigen) sind ebenfalls hilfreich und immer gern gesehen. Wenn du dich daran gewöhnt hast, wie LU Server funktionierten und deine Entwicklungserfahrung unter Beweis gestellt hast, könnten etablierte Projekte bereit sein dich mit aufzunehmen (i.A. auf Einladung). Du kannst auch dieses Projekt"
+    post: "kopieren und einen Pull-Request einreichen um Inhalt oder Präsentation zu verbessern."
+  f: "Ansonsten wirken nette Worte und Ermutigungen manchmal Wunder um die bisherigen Entwickler zu motivieren, weiterhin ihr bestes zu geben um das Spiel wieder möglichst nah an die Erfahrung des Original zu bringen."
+#join-forces:
+#  a: "There are multiple reasons for this, including:"
+#  f: "However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration amoung the various teams in understanding the LU systems (for example, through the public documentation), building utilities, and discussing optimal implementation approaches."
+#  q: "Why can't everyone join forces and work on one project?"
+#  r:
+#    brook: "Brook's Law, that is, \"adding more developers to an already late project won't make it go any faster\". It takes time to get people up to speed on a different set of code, a different work environment, and so on. In the end, it's possible that more resources would be spent consolidating than would be gained by a merger"
+#    fun: "Individuals want to try their own hand at building a server themselves for fun or experience"
+#    goals: "Differing ideologies and specific goals of each project"
+#    issues: "Sadly, there are still lingering interpersonal issues amoung some members of the development community as well"
+#    langs: "The use of different programming languages entirely"
+#play:
+#  a: "There are several open source projects that you can download and setup. Currently WLUS is the recommended one."
+#  q: "How can I play LU right now?"
+#  steps:
+#    client:
+#      link: "LEGO Universe Client"
+#      post: ~
+#      pre: "Download a"
+#    extract: "Extract WLUS and the LEGO Universe Client to seperate folders"
+#    launch: "Launch LEGO Universe"
+#    login: "Login with the default username \"wesley\" and password \"play\""
+#    run: "Double click main.exe in the WLUS folder"
+#    server:
+#      post: ~
+#      pre: Download
+#    set-auth: "Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)"
+#start:
+#  a: "Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these captures. Not soon thereafter, the community began to overhype the little that was available in this implementation, and due to various reasons multiple fractures developed among the community. Multiple groups formed to work on furthering the understanding and implementation of LU servers, and through the formation, dissolution, and consolidation of these projects, the current major projects have come in to being, as well as paving the way for other experimental utilities and implementations."
+#  q: "How did it all start?"
+#what:
+#  a: "This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans."
+#  q: "What are LU Server Projects?"
+#where:
+#  a:
+#    link: Community/Contact
+#    post: ~
+#    pre: "Please see"
+#  q: "Where can I get in touch with other fans, developers, and community members? Where can I ask questions"
