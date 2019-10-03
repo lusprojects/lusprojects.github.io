@@ -1,0 +1,15 @@
+---
+luch:
+  pre: "For general discussion and questions, many fans and developers alike have congregated on the "
+  link: "LEGO Universe Community Hub Discord server"
+  post: "."
+lusp:
+  pre: "For this site and its specific contents, please see the "
+  link: "GitHub repository"
+  mid: " - feel free to "
+  issues: "file an issue"
+  post: "."
+projects:
+  pre: "For individual projects, see the information in the relevant sections ("
+  mid: " or "
+  post: "). "

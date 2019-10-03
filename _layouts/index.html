@@ -124,16 +124,16 @@
                 {{ site.data.lang[page.lang].faqs.help.a.mid-1 }}
                 <a href="http://lu-docs.readthedocs.io/en/latest/">{{ site.data.lang[page.lang].faqs.help.a.rtd }}</a>
                 {{ site.data.lang[page.lang].faqs.help.a.mid-2 }}
-                <a href="lusprojects.github.io">{{ site.data.lang[page.lang].faqs.help.a.lusp }}</a>
+                <a href="https://lusprojects.github.io">{{ site.data.lang[page.lang].faqs.help.a.lusp }}</a>
             {{ site.data.lang[page.lang].faqs.help.a.post }}</p>
             <p>{{ site.data.lang[page.lang].faqs.help.f }}</p>
         </div>
     </div>
     <div id="servers" class="py-4">
         <div class="container">
-            <h2>Servers</h2>
+            <h2>{{ site.data.lang[page.lang].nav.servers }}</h2>
             <hr>
-            <h3>Hosted</h3>
+            <h3>{{ site.data.lang[page.lang].servers.hosted }}</h3>
 
             <div class="card-deck mx-auto" style="margin-bottom: 30px;">
                 {% for server in site.hosted %}
@@ -141,10 +141,10 @@
                     <h4 class="card-header"> {{ server.name }} </h4>
                     <img class="card-img-middle" src="{{ server.image_path | absolute_url}}" alt="Card image cap">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: {{ server.status }}</li>
-                        <li class="list-group-item">Language: {{ server.language }}</li>
-                        <li class="list-group-item">Accepting Developers: {{ server.accepting_devs }}</li>
-                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ server.status }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{ server.language }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.accepting-devs }}: {{ server.accepting_devs }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.devs }}: {{ server.devs }}</li>
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
@@ -154,7 +154,7 @@
                 </div>
                 {% endfor %}
             </div>
-            <h3>Open Source</h3>
+            <h3>{{ site.data.lang[page.lang].servers.open-source }}</h3>
             <div class="card-columns mx-auto">
                 {% for server in site.opensource %}
                 <div class="card">
@@ -163,12 +163,12 @@
                         <div class="card-text"> {{ server.desc }} </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: {{ server.status }}</li>
-                        <li class="list-group-item">Language: {{server.language}}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ server.status }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{server.language}}</li>
                         {% if server.devs %}
-                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].servers.devs }}: {{ server.devs }}</li>
                         {% elsif server.author %}
-                        <li class="list-group-item">Author: {{ server.author }}</li>
+                        <li class="list-group-item">{{ site.data.lang[page.lang].general.author }}: {{ server.author }}</li>
                         {% endif %}
                     </ul>
                     <div class="card-footer">
@@ -183,13 +183,13 @@
     </div>
     <div id="development-resources" class="py-4">
         <div class="container">
-            <h2>Development Resources</h2>
+            <h2>{{ site.data.lang[page.lang].nav.dev-resources }}</h2>
             <hr>
             <div>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><button class="btn active" id="All_tag" data-tagbtn="1" onclick="showAll()">All</button></li>
-                    <li class="list-inline-item"><button class="btn" id="Research_tag" data-tagbtn="1" onclick="searchForTag('Research')">Research</button></li>
-                    <li class="list-inline-item"><button class="btn" id="Networking_tag" data-tagbtn="1" onclick="searchForTag('Networking')">Networking</button></li>
+                    <li class="list-inline-item"><button class="btn active" id="All_tag" data-tagbtn="1" onclick="showAll()">{{ site.data.lang[page.lang].dev-resources.tags.all }}</button></li>
+                    <li class="list-inline-item"><button class="btn" id="Research_tag" data-tagbtn="1" onclick="searchForTag('Research')">{{ site.data.lang[page.lang].dev-resources.tags.research }}</button></li>
+                    <li class="list-inline-item"><button class="btn" id="Networking_tag" data-tagbtn="1" onclick="searchForTag('Networking')">{{ site.data.lang[page.lang].dev-resources.tags.networking }}</button></li>
                 </ul>
             </div>
             <div>
@@ -201,9 +201,9 @@
                             <div class="card-text"> {{ resource.desc }} </div>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Status: {{ resource.status }}</li>
-                            <li class="list-group-item">Language: {{ resource.language }}</li>
-                            <li class="list-group-item">Author: {{ resource.author }}</li>
+                            <li class="list-group-item">{{ site.data.lang[page.lang].general.status }}: {{ resource.status }}</li>
+                            <li class="list-group-item">{{ site.data.lang[page.lang].general.language }}: {{ resource.language }}</li>
+                            <li class="list-group-item">{{ site.data.lang[page.lang].general.author }}: {{ resource.author }}</li>
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
@@ -218,12 +218,28 @@
     </div>
     <div id="contact-community" class="py-4">
         <div class="container">
-            <h2>Community and Contact</h2>
+            <h2>{{ site.data.lang[page.lang].nav.community-contact }}</h2>
             <hr>
             <ul>
-                <li> For general discussion and questions, many fans and developers alike have congregated on the <a href="https://discord.gg/NKry7cY">LEGO Universe Community Hub Discord server</a>. </li>
-                <li> For this site and its specific contents, please see the <a href="https://github.com/lusprojects/lusprojects.github.io">GitHub repository</a> - feel free to <a href="https://github.com/lusprojects/lusprojects.github.io/issues">file an issue</a>. </li>
-                <li> For individual projects, see the information in the relevant sections (<a href="#servers">Servers</a> or <a href="#development-resources">Development Resources</a>). </li>
+                <li>{{ site.data.lang[page.lang].community.luch.pre }}<!--
+                --><a href="https://discord.gg/NKry7cY"><!--
+                -->{{ site.data.lang[page.lang].community.luch.link }}<!--
+                --></a><!--
+                -->{{ site.data.lang[page.lang].community.luch.post }}</li>
+                <li>{{ site.data.lang[page.lang].community.lusp.pre }}<!--
+                --><a href="https://github.com/lusprojects/lusprojects.github.io"><!--
+                -->{{ site.data.lang[page.lang].community.lusp.link }}<!--
+                --></a><!--
+                -->{{ site.data.lang[page.lang].community.lusp.mid }}<!--
+                --><a href="https://github.com/lusprojects/lusprojects.github.io/issues"><!--
+                -->{{ site.data.lang[page.lang].community.lusp.issues }}<!--
+                --></a><!--
+                -->{{ site.data.lang[page.lang].community.lusp.post }}</li>
+                <li>{{ site.data.lang[page.lang].community.projects.pre }}<!--
+                --><a href="#servers">{{ site.data.lang[page.lang].nav.servers }}</a><!--
+                -->{{ site.data.lang[page.lang].community.projects.mid }}<!--
+                --><a href="#development-resources">{{ site.data.lang[page.lang].nav.dev-resources }}</a><!--
+                -->{{ site.data.lang[page.lang].community.projects.post }}</li>
             </ul>
         </div>
     </div>
