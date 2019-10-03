@@ -81,48 +81,52 @@
             <h3>{{ site.data.lang[page.lang].faqs.what.q }}</h3>
             <p>{{ site.data.lang[page.lang].faqs.what.a }}</p>
             <h3>{{ site.data.lang[page.lang].faqs.where.q }}</h3>
-            <p>{{ site.data.lang[page.lang].faqs.where.a }}</p>
+            <p>{{ site.data.lang[page.lang].faqs.where.a.pre }}
+            <a href="#contact-community">{{ site.data.lang[page.lang].faqs.where.a.link }}</a>
+            {{ site.data.lang[page.lang].faqs.where.a.post }}</p>
             <h3>{{ site.data.lang[page.lang].faqs.start.q }}</h3>
             <p>{{ site.data.lang[page.lang].faqs.start.a }}</p>
-            <h3>Why can't everyone join forces and work on one project?</h3>
-            <p>There are multiple reasons for this, including:</p>
+            <h3>{{ site.data.lang[page.lang].faqs.join-forces.q }}</h3>
+            <p>{{ site.data.lang[page.lang].faqs.join-forces.a }}</p>
             <ul>
-                <li>Brook's Law, that is, "adding more developers to an already late project won't make it go any faster". It takes time to get people up to speed on a different set of code, a different work environment, and so on. In the end, it's possible
-                    that more resources would be spent consolidating than would be gained by a merger</li>
-                <li>The use of different programming languages entirely</li>
-                <li>Differing ideologies and specific goals of each project</li>
-                <li>Individuals want to try their own hand at building a server themselves for fun or experience</li>
-                <li>Sadly, there are still lingering interpersonal issues amoung some members of the development community as well</li>
+                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.brook }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.langs }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.goals }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.fun }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.join-forces.r.issues }}</li>
             </ul>
-            <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration amoung the various teams in understanding the LU systems (for example,
-                through the public documentation), building utilities, and discussing optimal implementation approaches. </p>
-            <h3>What's taking so long?</h3>
-            <p>Based on a previous comment by LCDR, this is probably best summed up as follows</p>
+            <p>{{ site.data.lang[page.lang].faqs.join-forces.f }}</p>
+            <h3>{{ site.data.lang[page.lang].faqs.eta.q }}</h3>
+            <p>{{ site.data.lang[page.lang].faqs.eta.a }}</p>
             <ul>
-                <li>At the start, absolutely nothing was known about the client, the networking protocol, or much about LU's systems in general. A significant amount of reverse engineering on the client and captured network packets has been needed to be done,
-                    and even now there's still a lot that we don't know, and we're constantly working to learn more about LU's incredibly complex systems.</li>
-                <li>Everything is being built from the ground up. The only things we can use are the RakNet networking library that LU uses, some database libraries, and other extremely generic utilities that are more for ease of programming than anything.</li>
-                <li>There's only a few people working on it, and while they have a fair amount of software development experience, many are hobbyists or are still in school. On top of that, no one is working on this full-time, and sadly personal issues and
-                    general lack of available time is common.</li>
+                <li>{{ site.data.lang[page.lang].faqs.eta.r.re }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.eta.r.dev }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.eta.r.people }}</li>
             </ul>
-            <h3>How can I play LU right now?</h3>
-            <p>There are several open source projects that you can download and setup. Currently WLUS is the recommended one.</p>
+            <h3>{{ site.data.lang[page.lang].faqs.play.q }}</h3>
+            <p>{{ site.data.lang[page.lang].faqs.play.a }}</p>
             <ol>
-                <li>Download a <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">LEGO Universe Client</a></li>
-                <li>Download <a href="https://github.com/wesleyd1124/WLUS/releases/tag/1.0">WLUS</a></li>
-                <li>Extract WLUS and the LEGO Universe Client to seperate folders</li>
-                <li>Double click __main__.exe in the WLUS folder</li>
-                <li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
-                <li>Launch LEGO Universe</li>
-                <li>Login with the default username "wesley" and password "play"</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.client.pre }}
+                  <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">{{ site.data.lang[page.lang].faqs.play.steps.client.link }}</a>
+                {{ site.data.lang[page.lang].faqs.play.steps.client.post }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.server.pre }}
+                  <a href="https://github.com/wesleyd1124/WLUS/releases/tag/1.0">WLUS</a>
+                {{ site.data.lang[page.lang].faqs.play.steps.server.post }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.extract }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.run }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.set-auth }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.launch }}</li>
+                <li>{{ site.data.lang[page.lang].faqs.play.steps.login }}</li>
             </ol>
-            <h3>What can I do to help?</h3>
-            <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
-                (either via the original
-                <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">Google Docs</a> or the
-                <a href="http://lu-docs.readthedocs.io/en/latest/">Unofficial ReadTheDocs port</a>). Contributions to the documentation of any kind (through additional client or network reverse engineering, systems documentation, typo fixes, or anything else) are also helpful and are always appreciated.
-                If you become comfortable with how LU servers operate and show competance in your development skills, more established projects may also be willing to take you on at that time (generally by invitation). You can also fork this project <a href="lusprojects.github.io">on GitHub</a> and submit a pull request if you wish to improve its content or functionality. </p>
-            <p> Otherwise, your kind words and encouragement do wonders to keep all the developers encouraged to keep working at their hardest to bring back the game as close as possible to the original experience. </p>
+            <h3>{{ site.data.lang[page.lang].faqs.help.q }}</h3>
+            <p>{{ site.data.lang[page.lang].faqs.help.a.pre }}
+                <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">{{ site.data.lang[page.lang].faqs.help.a.gdoc }}</a>
+                {{ site.data.lang[page.lang].faqs.help.a.mid-1 }}
+                <a href="http://lu-docs.readthedocs.io/en/latest/">{{ site.data.lang[page.lang].faqs.help.a.rtd }}</a>
+                {{ site.data.lang[page.lang].faqs.help.a.mid-2 }}
+                <a href="lusprojects.github.io">{{ site.data.lang[page.lang].faqs.help.a.lusp }}</a>
+            {{ site.data.lang[page.lang].faqs.help.a.post }}</p>
+            <p>{{ site.data.lang[page.lang].faqs.help.f }}</p>
         </div>
     </div>
     <div id="servers" class="py-4">
