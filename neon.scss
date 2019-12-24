@@ -275,6 +275,13 @@ mark {
   @include media-breakpoint-up(lg) {
     column-count: 4;
   }
+  &>.card-footer{
+    &>a {
+      &>i {
+	margin-right: 5px;
+      }
+    }
+  }
 }
 
 .card-deck .card {
