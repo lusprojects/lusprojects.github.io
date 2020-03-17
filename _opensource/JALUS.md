@@ -1,8 +1,8 @@
 ---
 name: JALUS
-status: Experimental
+status: Inactive
 language: C++
 desc: Just Another LEGO Universe Server
 links: [['GitHub', 'https://github.com/cuzitsjonny/JALUS', 'fab fa-github']]
-devs: Tracer, Rocket
+Authors: Tracer, Jonny
 ---
