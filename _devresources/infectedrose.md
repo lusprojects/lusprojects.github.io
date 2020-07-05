@@ -1,6 +1,6 @@
 ---
 name: Infected Rose
-status: Active Development
+status: Inactive
 language: C#
 tag: General
 desc: LEGO Universe file I/O library collection
