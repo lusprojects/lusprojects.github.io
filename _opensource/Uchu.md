@@ -1,6 +1,6 @@
 ---
 name: Uchū
-status: Active Development
+status: Inactive
 language: C#
 desc: LEGO Universe server written in C#
 links: [['GitHub', 'https://github.com/yuwui/Uchu', 'fab fa-github']]
