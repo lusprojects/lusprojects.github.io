@@ -1,6 +1,6 @@
 ---
 name: RakDotNet
-status: Active Development
+status: Inactive
 language: C#
 tag: Networking
 desc: C# RakNet Port with TCP/UDP support
