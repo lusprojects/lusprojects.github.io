@@ -1,6 +1,6 @@
 ---
 name: Operation Crux (OpCrux)
-status: Active Development
+status: Closed Alpha
 language: C++
 accepting_devs: "Yes"
 image_path: /assets/opcrux_logo.png
