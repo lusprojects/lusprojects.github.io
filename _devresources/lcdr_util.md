@@ -4,6 +4,6 @@ status: Active Development
 language: Python
 tag: Research
 desc: LU File and Packet Utilities
-links: [['BitBucket', 'https://bitbucket.org/lcdr/utils', 'fab fa-bitbucket']]
+links: [['Github', 'https://github.com/lcdr/utils', 'fab fa-github']]
 author: lcdr
 ---
