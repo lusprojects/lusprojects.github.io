@@ -1,6 +1,6 @@
 ---
 name: Uchū
-status: Open temporarily before it is retired as a hosted project by Simon.
+status: Active
 language: C#
 accepting_devs: "Yes"
 image_path: /assets/uchu_logo.png
