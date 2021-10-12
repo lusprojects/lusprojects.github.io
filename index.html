@@ -14,7 +14,7 @@ title: LU Server Projects
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
-	<style>
+    <style>
         .card-header:first-child {
             height: 3.5em;
         }
@@ -32,11 +32,11 @@ title: LU Server Projects
             color:#111;
             font-weight:bold;
         }
-		.btn {
-			background-color:rgba(51, 51, 51, 0.5);
+        .btn {
+            background-color:rgba(51, 51, 51, 0.5);
             color:#f1cd31;
             font-weight:bold;
-		}
+        }
     </style>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
@@ -96,10 +96,10 @@ title: LU Server Projects
                     that more resources would be spent consolidating than would be gained by a merger</li>
                 <li>The use of different programming languages entirely</li>
                 <li>Differing ideologies and specific goals of each project</li>
-		<li>Individuals want to try their own hand at building a server themselves for fun or experience</li>
-                <li>Sadly, there are still lingering interpersonal issues amoung some members of the development community as well</li>
+                <li>Individuals want to try their own hand at building a server themselves for fun or experience</li>
+                <li>Sadly, there are still lingering interpersonal issues among some members of the development community as well</li>
             </ul>
-            <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration amoung the various teams in understanding the LU systems (for example,
+            <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration among the various teams in understanding the LU systems (for example,
                 through the public documentation), building utilities, and discussing optimal implementation approaches. </p>
             <h3>What's taking so long?</h3>
             <p>Based on a previous comment by LCDR, this is probably best summed up as follows</p>
@@ -111,61 +111,90 @@ title: LU Server Projects
                     general lack of available time is common.</li>
             </ul>
             <h3>How can I play LU right now?</h3>
-            <p>There are several open source projects that you can download and setup. Currently Uchu is the recommended one.</p>
+            <p>You will need a client (ie, the game itself that you would install from a game disk/with the patcher) and a server emulator (the program responsible for communicating between multiple players, saving and loading user data, etc).</p>
+            <h3>How do I get a game client? Can I use my live client? Can I use the client that comes with the disk?</h3>
+            <p>
+                You'll need a complete download of the final release of the client, version 1.10.64. You can use the
+                client you played with during live as long as you used the “full download” option and your client was
+                fully updated. Reinstalling the client from the disk will not work as it does not have all data loaded
+                (you needed to use the patcher to update it to the latest version, which is no longer online).
+            </p>
+            <p>
+                While we legally cannot distribute clients or otherwise provide links to client uploads, we are aware
+                that they exist. To ensure you stay safe from malware and have a complete/valid client, we have compiled
+                a list of SHA256 checksums we know are valid. We highly recommend doing this verification if you're not
+                using your own client from live. To verify your client checksum:
+            </p>
+            <ul>
+                <li>On Windows, open a command prompt and run <code>certutil -hashfile &lt;file&gt; SHA256</code>, replacing &lt;file&gt; with the path to your client</li>
+                <li>On MacOS or Linux, open a terminal and run <code>shasum -a 256 &lt;file&gt;</code>, replacing &lt;file&gt; with the path to your client</li>
+            </ul>
+            <p>Known good checksums are:</p>
+            <ul>
+                <li><code>8f6c7e84eca3bab93232132a88c4ae6f8367227d7eafeaa0ef9c40e86c14edf5</code> (packed client, rar compressed)</li>
+                <li><code>c1531bf9401426042e8bab2de04ba1b723042dc01d9907c2635033d417de9e05</code> (packed client, includes extra locales, rar compressed)</li>
+                <li><code>0d862f71eedcadc4494c4358261669721b40b2131101cbd6ef476c5a6ec6775b</code> (unpacked client, includes extra locales, rar compressed)</li>
+            </ul>
+            <h3>How do I get a server emulator?</h3>
+            <p>
+                DLU has announced they will be releasing their server emulator, most likely before the end of the year.
+                We will update this information at that point. Until then, you may be interested in setting up Uchu:
+            </p>
             <ol>
-                <li>You will need to have an LU client with you or obtain it somewhere else. Due to recent developments with The LEGO Group, we won't be handing out LU clients</li>
-                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/">Uchu-Tool</a></li>
-                <li>Extract Uchu-Tool and the LEGO Universe Client to seperate folders</li>
-                <li>Run Uchu.Tool.exe and it will download the server</li>
-                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases">Network Protocol mod</a></li>
-                <li>Extract it into your LU Client folder, make sure the mods folder is in the same folder as legouniverse.exe</li>
-				<li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
-                <li>Go to the Autentication window that would have been opened up by Uchu.Tool.exe and type "/adduser username" without the quotations and the username field would be your username</li>
+                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu-Tool</a> and extract the zip file</li>
+                <li>Run Uchu.Tool.exe. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
+                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a></li>
+                <li>Extract it into your LU client folder, make sure the mods folder is in the same folder as legouniverse.exe</li>
+                <li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
+                <li>Add a user in the Uchu console (if you're on Windows, the one called Authentication) by typing <code>/adduser username</code> (replacing "username" with what you want your username to be).</li>
+                <li>Optionally, you can give yourself more command permissions using <code>/gamemaster username level</code>. The highest level available is <code>9</code>.</li>
                 <li>Launch LEGO Universe</li>
             </ol>
-
             <p>If Uchu can't find the client resources</p>
             <ol>
                 <li>Go to the uchu folder that should be in the same folder as Uchu.Tool.exe</li>
-                <li>Open config.xml using a text editor and locate "&lt;GameResourcesFolder&gt;path to res&lt;/GameResourcesFolder&gt;"</li>
-                <li>Add your client res folder, for example it should look like this "&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;" without quotations</li>
+                <li>Open config.xml using a text editor and locate <code>&lt;GameResourcesFolder&gt;path to res&lt;/GameResourcesFolder&gt;</code></li>
+                <li>Add your client res folder, for example it should look like this <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
             </ol>
+            <p>For help with Uchu, you can join the <a href="https://discord.gg/EFuTB8XZSV" target="_blank"><i class="fab fa-discord"></i> Uchu Community Discord server</a>.</p>
             <h3>What can I do to help?</h3>
             <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
                 (either via the original
                 <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">Google Docs</a> or the
                 <a href="http://lu-docs.readthedocs.io/en/latest/">Unofficial ReadTheDocs port</a>). Contributions to the documentation of any kind (through additional client or network reverse engineering, systems documentation, typo fixes, or anything else) are also helpful and are always appreciated.
-                If you become comfortable with how LU servers operate and show competance in your development skills, more established projects may also be willing to take you on at that time (generally by invitation). You can also fork this project <a href="https://github.com/lusprojects/lusprojects.github.io">on GitHub</a> and submit a pull request if you wish to improve its content or functionality. </p>
+                If you become comfortable with how LU servers operate and show competence in your development skills, more established projects may also be willing to take you on at that time (generally by invitation). You can also fork this project <a href="https://github.com/lusprojects/lusprojects.github.io">on GitHub</a> and submit a pull request if you wish to improve its content or functionality. </p>
             <p> Otherwise, your kind words and encouragement do wonders to keep all the developers encouraged to keep working at their hardest to bring back the game as close as possible to the original experience. </p>
         </div>
     </div>
-	<div class="container">
-		<h2>Servers</h2>
-		<div class="card-columns mx-auto">
-			{% for server in site.opensource %}
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title"> {{ server.name }} </h4>
-					<div class="card-text"> {{ server.desc }} </div>
-				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Status: {{ server.status }}</li>
-					<li class="list-group-item">Language: {{server.language}}</li>
-					{% if server.devs %}
-					<li class="list-group-item">Active Devs: {{ server.devs }}</li>
-					{% elsif server.author %}
-					<li class="list-group-item">Author: {{ server.author }}</li>
-					{% endif %}
-				</ul>
-				<div class="card-footer">
-					{% for link in server.links %}
-					<a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
-					{% endfor %}
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
+    <div id="servers" class="py-4">
+      <div class="container">
+        <h2>Servers</h2>
+        <div class="card-columns mx-auto">
+          {% for server in site.opensource %}
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"> {{ server.name }} </h4>
+              <div class="card-text"> {{ server.desc }} </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Status: {{ server.status }}</li>
+              <li class="list-group-item">Language: {{server.language}}</li>
+              {% if server.devs %}
+              <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+              {% elsif server.author %}
+              <li class="list-group-item">Author: {{ server.author }}</li>
+              {% endif %}
+            </ul>
+            <div class="card-footer">
+              {% for link in server.links %}
+              <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
     <div id="development-resources" class="py-4">
         <div class="container">
             <h2>Development Resources</h2>
@@ -188,7 +217,7 @@ title: LU Server Projects
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Status: {{ resource.status }}</li>
                             <li class="list-group-item">Language: {{ resource.language }}</li>
-							<li class="list-group-item">Author: {{ resource.author }}</li>
+                            <li class="list-group-item">Author: {{ resource.author }}</li>
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
@@ -217,28 +246,28 @@ title: LU Server Projects
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha512-n6dYFOG599s4/mGlA6E+YLgtg9uPTOMDUb0IprSMDYVLr0ctiRryPEQ8gpM4DCMlx7M2G3CK+ZcaoOoJolzdCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
-		activeTag = "";
+        activeTag = "";
         function searchForTag(tag)
-        {	
-			$("[data-tagbtn]").removeClass("active");
-			$("#"+tag+"_tag").toggleClass("active");
-			if(activeTag != tag)
-			{
-				$("[data-tag]:not([data-tag~='"+tag+"'])").hide();
-				$("[data-tag~='"+tag+"']").show();
-				activeTag = tag;
-			}
-			else
-			{
-				showAll();
-				activeTag = "";
-			}
+        {
+            $("[data-tagbtn]").removeClass("active");
+            $("#"+tag+"_tag").toggleClass("active");
+            if(activeTag != tag)
+            {
+                $("[data-tag]:not([data-tag~='"+tag+"'])").hide();
+                $("[data-tag~='"+tag+"']").show();
+                activeTag = tag;
+            }
+            else
+            {
+                showAll();
+                activeTag = "";
+            }
         }
         function showAll()
         {
             $("[data-tag]").show();
-			$("[data-tagbtn]").removeClass("active");
-			$("#All_tag").toggleClass("active");
+            $("[data-tagbtn]").removeClass("active");
+            $("#All_tag").toggleClass("active");
         }
         function navigate() {
             var hash = $(this).attr('href');
