@@ -167,33 +167,33 @@ title: LU Server Projects
         </div>
     </div>
     <div id="servers" class="py-4">
-      <div class="container">
-        <h2>Servers</h2>
-        <div class="card-columns mx-auto">
-          {% for server in site.opensource %}
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title"> {{ server.name }} </h4>
-              <div class="card-text"> {{ server.desc }} </div>
+        <div class="container">
+            <h2>Servers</h2>
+            <div class="card-columns mx-auto">
+            {% for server in site.opensource %}
+            <div class="card">
+                <div class="card-body">
+                <h4 class="card-title"> {{ server.name }} </h4>
+                <div class="card-text"> {{ server.desc }} </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Status: {{ server.status }}</li>
+                <li class="list-group-item">Language: {{server.language}}</li>
+                {% if server.devs %}
+                <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                {% elsif server.author %}
+                <li class="list-group-item">Author: {{ server.author }}</li>
+                {% endif %}
+                </ul>
+                <div class="card-footer">
+                {% for link in server.links %}
+                <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
+                {% endfor %}
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Status: {{ server.status }}</li>
-              <li class="list-group-item">Language: {{server.language}}</li>
-              {% if server.devs %}
-              <li class="list-group-item">Active Devs: {{ server.devs }}</li>
-              {% elsif server.author %}
-              <li class="list-group-item">Author: {{ server.author }}</li>
-              {% endif %}
-            </ul>
-            <div class="card-footer">
-              {% for link in server.links %}
-              <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
-              {% endfor %}
+            {% endfor %}
             </div>
-          </div>
-          {% endfor %}
         </div>
-      </div>
     </div>
     <div id="development-resources" class="py-4">
         <div class="container">
