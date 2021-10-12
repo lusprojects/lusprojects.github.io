@@ -14,7 +14,7 @@ title: LU Server Projects
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
-	<style>
+    <style>
         .card-header:first-child {
             height: 3.5em;
         }
@@ -32,11 +32,11 @@ title: LU Server Projects
             color:#111;
             font-weight:bold;
         }
-		.btn {
-			background-color:rgba(51, 51, 51, 0.5);
+        .btn {
+            background-color:rgba(51, 51, 51, 0.5);
             color:#f1cd31;
             font-weight:bold;
-		}
+        }
     </style>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
@@ -99,7 +99,7 @@ title: LU Server Projects
                     that more resources would be spent consolidating than would be gained by a merger</li>
                 <li>The use of different programming languages entirely</li>
                 <li>Differing ideologies and specific goals of each project</li>
-		<li>Individuals want to try their own hand at building a server themselves for fun or experience</li>
+                <li>Individuals want to try their own hand at building a server themselves for fun or experience</li>
                 <li>Sadly, there are still lingering interpersonal issues amoung some members of the development community as well</li>
             </ul>
             <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration amoung the various teams in understanding the LU systems (for example,
@@ -122,7 +122,7 @@ title: LU Server Projects
                 <li>Run Uchu.Tool.exe and it will download the server</li>
                 <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases">Network Protocol mod</a></li>
                 <li>Extract it into your LU Client folder, make sure the mods folder is in the same folder as legouniverse.exe</li>
-				<li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
+                <li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
                 <li>Go to the Autentication window that would have been opened up by Uchu.Tool.exe and type "/adduser username" without the quotations and the username field would be your username</li>
                 <li>Launch LEGO Universe</li>
             </ol>
@@ -157,7 +157,7 @@ title: LU Server Projects
                         <li class="list-group-item">Status: {{ server.status }}</li>
                         <li class="list-group-item">Language: {{ server.language }}</li>
                         <li class="list-group-item">Accepting Developers: {{ server.accepting_devs }}</li>
-						<li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
                     </ul>
                     <div class="card-footer">
                         {% for link in server.links %}
@@ -179,7 +179,7 @@ title: LU Server Projects
                         <li class="list-group-item">Status: {{ server.status }}</li>
                         <li class="list-group-item">Language: {{server.language}}</li>
                         {% if server.devs %}
-						<li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
                         {% elsif server.author %}
                         <li class="list-group-item">Author: {{ server.author }}</li>
                         {% endif %}
@@ -216,7 +216,7 @@ title: LU Server Projects
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Status: {{ resource.status }}</li>
                             <li class="list-group-item">Language: {{ resource.language }}</li>
-							<li class="list-group-item">Author: {{ resource.author }}</li>
+                            <li class="list-group-item">Author: {{ resource.author }}</li>
                         </ul>
                         <div class="card-footer">
                             {% for link in resource.links %}
@@ -245,28 +245,28 @@ title: LU Server Projects
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha512-n6dYFOG599s4/mGlA6E+YLgtg9uPTOMDUb0IprSMDYVLr0ctiRryPEQ8gpM4DCMlx7M2G3CK+ZcaoOoJolzdCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
-		activeTag = "";
+        activeTag = "";
         function searchForTag(tag)
-        {	
-			$("[data-tagbtn]").removeClass("active");
-			$("#"+tag+"_tag").toggleClass("active");
-			if(activeTag != tag)
-			{
-				$("[data-tag]:not([data-tag~='"+tag+"'])").hide();
-				$("[data-tag~='"+tag+"']").show();
-				activeTag = tag;
-			}
-			else
-			{
-				showAll();
-				activeTag = "";
-			}
+        {
+            $("[data-tagbtn]").removeClass("active");
+            $("#"+tag+"_tag").toggleClass("active");
+            if(activeTag != tag)
+            {
+                $("[data-tag]:not([data-tag~='"+tag+"'])").hide();
+                $("[data-tag~='"+tag+"']").show();
+                activeTag = tag;
+            }
+            else
+            {
+                showAll();
+                activeTag = "";
+            }
         }
         function showAll()
         {
             $("[data-tag]").show();
-			$("[data-tagbtn]").removeClass("active");
-			$("#All_tag").toggleClass("active");
+            $("[data-tagbtn]").removeClass("active");
+            $("#All_tag").toggleClass("active");
         }
         function navigate() {
             var hash = $(this).attr('href');
