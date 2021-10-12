@@ -114,15 +114,24 @@ title: LU Server Projects
                     general lack of available time is common.</li>
             </ul>
             <h3>How can I play LU right now?</h3>
-            <p>There are several open source projects that you can download and setup. Currently WLUS is the recommended one.</p>
+            <p>There are several open source projects that you can download and setup. Currently Uchu is the recommended one.</p>
             <ol>
-                <li>Download a <a href="https://docs.google.com/document/d/1XmHXWuUQqzUIOcv6SVVjaNBm4bFg9lnW4Pk1pllimEg/edit">LEGO Universe Client</a></li>
-                <li>Download <a href="https://github.com/wesleyd1124/WLUS/releases/tag/1.0">WLUS</a></li>
-                <li>Extract WLUS and the LEGO Universe Client to seperate folders</li>
-                <li>Double click __main__.exe in the WLUS folder</li>
+                <li>You will need to have an LU client with you or obtain it somewhere else. Due to recent developments with The LEGO Group, we won't be handing out LU clients</li>
+                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/">Uchu-Tool</a></li>
+                <li>Extract Uchu-Tool and the LEGO Universe Client to seperate folders</li>
+                <li>Run Uchu.Tool.exe and it will download the server</li>
+                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases">Network Protocol mod</a></li>
+                <li>Extract it into your LU Client folder, make sure the mods folder is in the same folder as legouniverse.exe</li>
 				<li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
+                <li>Go to the Autentication window that would have been opened up by Uchu.Tool.exe and type "/adduser username" without the quotations and the username field would be your username</li>
                 <li>Launch LEGO Universe</li>
-                <li>Login with the default username "wesley" and password "play"</li>
+            </ol>
+
+            <p>If Uchu can't find the client resources</p>
+            <ol>
+                <li>Go to the uchu folder that should be in the same folder as Uchu.Tool.exe</li>
+                <li>Open config.xml using a text editor and locate "&lt;GameResourcesFolder&gt;path to res&lt;/GameResourcesFolder&gt;"</li>
+                <li>Add your client res folder, for example it should look like this "&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;" without quotations</li>
             </ol>
             <h3>What can I do to help?</h3>
             <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
