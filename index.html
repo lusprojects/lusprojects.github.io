@@ -85,7 +85,7 @@ title: LU Server Projects
             <h3>What are LU Server Projects?</h3>
             <p> This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in
                 reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans. </p>
-            <h3>Where can I get in touch with other fans, developers, and community members? Where can I ask questions</h3>
+            <h3>Where can I get in touch with other fans, developers, and community members? Where can I ask questions?</h3>
             <p> Please see <a href="#contact-community"><i class="fas fa-users"></i> Community/Contact</a> </p>
             <h3>How did it all start?</h3>
             <p> Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these
@@ -144,20 +144,20 @@ title: LU Server Projects
                 We will update this information at that point. Until then, you may be interested in setting up Uchu:
             </p>
             <ol>
-                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu-Tool</a> and extract the zip file</li>
-                <li>Run Uchu.Tool.exe. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
-                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a></li>
-                <li>Extract it into your LU client folder, make sure the mods folder is in the same folder as legouniverse.exe</li>
-                <li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read 'AUTHSERVERIP=0:localhost,' (this may already be the case depending on the client)</li>
+                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu Tool</a> and extract the zip file.</li>
+                <li>Run <b>Uchu.Tool.exe</b>. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
+                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a>.</li>
+                <li>Extract it into your LU client folder. Make sure the <b>mods</b> folder is in the same folder as <b>legouniverse.exe</b>.</li>
+                <li>Open <b>boot.cfg</b> in the LEGO Universe Client folder and change the line starting with <code>AUTHSERVERIP</code> to read <code>AUTHSERVERIP=0:localhost,</code> (this may already be the case depending on the client).</li>
                 <li>Add a user in the Uchu console (if you're on Windows, the one called Authentication) by typing <code>/adduser username</code> (replacing "username" with what you want your username to be).</li>
                 <li>Optionally, you can give yourself more command permissions using <code>/gamemaster username level</code>. The highest level available is <code>9</code>.</li>
-                <li>Launch LEGO Universe</li>
+                <li>Launch LEGO Universe (<b>legouniverse.exe</b>).</li>
             </ol>
-            <p>If Uchu can't find the client resources</p>
+            <p>If Uchu can't find the client resources:</p>
             <ol>
-                <li>Go to the uchu folder that should be in the same folder as Uchu.Tool.exe</li>
-                <li>Open config.xml using a text editor and locate <code>&lt;GameResourcesFolder&gt;path to res&lt;/GameResourcesFolder&gt;</code></li>
-                <li>Add your client res folder, for example it should look like this <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
+                <li>Go to the <b>uchu</b> folder, which is in the same folder as <b>Uchu.Tool.exe</b>.</li>
+                <li>Open <b>config.xml</b> using a text editor and locate <code>&lt;GameResourcesFolder&gt;path to res folder&lt;/GameResourcesFolder&gt;</code></li>
+                <li>Add the path to your client's <b>res</b> folder. For example, on Windows this could be: <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
             </ol>
             <p>For help with Uchu, you can join the <a href="https://discord.gg/EFuTB8XZSV" target="_blank"><i class="fab fa-discord"></i> Uchu Community Discord server</a>.</p>
             <h3>What can I do to help?</h3>
