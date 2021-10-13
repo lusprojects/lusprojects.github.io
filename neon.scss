@@ -4,7 +4,7 @@
 * Copyright 2014-2018 Pingendo (https://pingendo.com)
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
   
 // Options
 // 
@@ -45,8 +45,8 @@ $link-hover-decoration: none;
 // Fonts
 $font-family-base: Montserrat;
 $headings-font-family: Montserrat;
-$font-weight-normal: 200;
-$headings-font-weight: 200;
+$font-weight-normal: 400;
+$headings-font-weight: 400;
 $lead-font-size:   1.30rem;
 $line-height-base: 1.8;
 
@@ -123,7 +123,7 @@ $table-inverse-bg:              				rgba(map-get($theme-colors,"light"),.5);
 $table-hover-bg:                				rgba(map-get($theme-colors,"light"),.1);
 $table-border-color:            				map-get($theme-colors,"dark");
 
-$font-size-base: 0.85rem;
+$font-size-base: 0.95rem;
 
 
 @import 'bootstrap-4.0.0';
