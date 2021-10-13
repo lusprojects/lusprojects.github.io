@@ -273,25 +273,55 @@ title: LU Server Projects
                 activeTag = "";
             }
         }
+
         function showAll()
         {
             $("[data-tag]").show();
             $("[data-tagbtn]").removeClass("active");
             $("#All_tag").toggleClass("active");
         }
+
         function navigate() {
+            // Get anchor to scroll to
             var hash = $(this).attr('href');
-            $('html,body').animate({
-                'scrollTop': $(hash).offset().top
+            // Scroll with a smooth animation
+            $('html, body').animate({
+                'scrollTop': $(hash).offset().top - menuHeight
             }, 1000);
-            $('.active').removeClass('active');
-            var asr = $('#active-sr').remove();
-            var active = $('[href="' + hash + '"]');
-            active.append(asr);
-            active.addClass('active');
         }
 
         $('nav a').click(navigate);
+
+        const menu = $('nav');
+        const menuHeight = $('nav').outerHeight();
+        const menuItems = menu.find('a.nav-link');
+
+        // get anchors
+        const anchorItems = menuItems.map(function() {
+            return $($(this).attr('href'));
+        }).filter(function() {
+            return $(this).length == 1;
+        });
+
+        $(window).scroll(function(e) {
+            // current scroll distance from top
+            const distanceFromTop = this.scrollY;
+
+            // find out which anchors have been scrolled past
+            passedElements = anchorItems.filter(function() {
+                return $(this).offset().top <= distanceFromTop + menuHeight + 10;
+            });
+
+            // get the last one
+            lastPassedElement = passedElements[passedElements.length - 1];
+            id = lastPassedElement?.attr('id')
+
+            // set the correct menu item as active
+            menuItem = menuItems.filter(`[href="#${id}"]`);
+            menuItems.parent().filter('.active').removeClass('active');
+            menuItem.parent().addClass('active');
+        });
+
         try {
             navigate($('[href="' + window.location.hash + '"]'));
         } catch(e){}
