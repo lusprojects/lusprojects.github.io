@@ -4,6 +4,6 @@ status: Active Development
 language: Python
 tag: Networking
 desc: Python RakNet Port
-links: [['Github', 'https://github.com/lcdr/pyraknet']]
+links: [['GitHub', 'https://github.com/lcdr/pyraknet', 'fab fa-github']]
 author: lcdr
 ---

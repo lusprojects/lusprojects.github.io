@@ -1,6 +1,6 @@
 ---
 name: Darkflame Universe (DLU)
-status: Alpha 2 (Crash Testing)
+status: Final preparations before open-source release
 language: C++
 accepting_devs: "No"
 image_path: /assets/dlu_logo.png
