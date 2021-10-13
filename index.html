@@ -82,17 +82,17 @@ title: LU Server Projects
         <div class="container">
             <h2><i class="fas fa-question-circle"></i> FAQs</h2>
             <hr>
-            <h3>What are LU Server Projects?</h3>
+            <h3 id="what-is-lusp">What are LU Server Projects?</h3>
             <p> This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in
                 reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans. </p>
             <h3>Where can I get in touch with other fans, developers, and community members? Where can I ask questions?</h3>
             <p> Please see <a href="#contact-community"><i class="fas fa-users"></i> Community/Contact</a> </p>
-            <h3>How did it all start?</h3>
+            <h3 id="history">How did it all start?</h3>
             <p> Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these
                 captures. Not soon thereafter, the community began to overhype the little that was available in this implementation, and due to various reasons multiple fractures developed among the community. Multiple groups formed to work on furthering
                 the understanding and implementation of LU servers, and through the formation, dissolution, and consolidation of these projects, the current major projects have come in to being, as well as paving the way for other experimental utilities
                 and implementations. </p>
-            <h3>Why can't everyone join forces and work on one project?</h3>
+            <h3 id="why-dont-projects-merge">Why can't everyone join forces and work on one project?</h3>
             <p>There are multiple reasons for this, including:</p>
             <ul>
                 <li>Brook's Law, that is, "adding more developers to an already late project won't make it go any faster". It takes time to get people up to speed on a different set of code, a different work environment, and so on. In the end, it's possible
@@ -104,7 +104,7 @@ title: LU Server Projects
             </ul>
             <p> However, this is not to say that the projects do not collaborate at all. In fact, this is the complete opposite. There is an immense amount of communication and collaboration among the various teams in understanding the LU systems (for example,
                 through the public documentation), building utilities, and discussing optimal implementation approaches. </p>
-            <h3>What's taking so long?</h3>
+            <h3 id="what-takes-so-long">What's taking so long?</h3>
             <p>Based on a previous comment by LCDR, this is probably best summed up as follows</p>
             <ul>
                 <li>At the start, absolutely nothing was known about the client, the networking protocol, or much about LU's systems in general. A significant amount of reverse engineering on the client and captured network packets has been needed to be done,
@@ -113,12 +113,12 @@ title: LU Server Projects
                 <li>There's only a few people working on it, and while they have a fair amount of software development experience, many are hobbyists or are still in school. On top of that, no one is working on this full-time, and sadly personal issues and
                     general lack of available time is common.</li>
             </ul>
-            <h3>How can I play LU right now?</h3>
+            <h3 id="how-to-play">How can I play LU right now?</h3>
             <p>You will need a client (ie, the game itself that you would install from a game disk/with the patcher) and a server emulator (the program responsible for communicating between multiple players, saving and loading user data, etc).</p>
-            <h3>How do I get a game client? Can I use my live client? Can I use the client that comes with the disk?</h3>
+            <h3 id="how-to-client">How do I get a game client? Can I use my live client? Can I use the client that comes with the disk?</h3>
             <p>
                 You'll need a complete download of the final release of the client, version 1.10.64. You can use the
-                client you played with during live as long as you used the “full download” option and your client was
+                client you played with during live as long as you used the "full download" option and your client was
                 fully updated. Reinstalling the client from the disk will not work as it does not have all data loaded
                 (you needed to use the patcher to update it to the latest version, which is no longer online).
             </p>
@@ -138,7 +138,7 @@ title: LU Server Projects
                 <li><code>c1531bf9401426042e8bab2de04ba1b723042dc01d9907c2635033d417de9e05</code> (packed client, includes extra locales, rar compressed)</li>
                 <li><code>0d862f71eedcadc4494c4358261669721b40b2131101cbd6ef476c5a6ec6775b</code> (unpacked client, includes extra locales, rar compressed)</li>
             </ul>
-            <h3>How do I get a server emulator?</h3>
+            <h3 id="how-to-server">How do I get a server emulator?</h3>
             <p>
                 DLU has announced they will be releasing their server emulator, most likely before the end of the year.
                 We will update this information at that point. Until then, you may be interested in setting up Uchu:
@@ -146,8 +146,7 @@ title: LU Server Projects
             <ol>
                 <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu Tool</a> and extract the zip file.</li>
                 <li>Run <b>Uchu.Tool.exe</b>. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
-                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a>.</li>
-                <li>Extract it into your LU client folder. Make sure the <b>mods</b> folder is in the same folder as <b>legouniverse.exe</b>.</li>
+                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a> and extract it into your LEGO Universe client folder. Make sure the <b>mods</b> folder is in the same folder as <b>legouniverse.exe</b>.</li>
                 <li>Open <b>boot.cfg</b> in the LEGO Universe Client folder and change the line starting with <code>AUTHSERVERIP</code> to read <code>AUTHSERVERIP=0:localhost,</code> (this may already be the case depending on the client).</li>
                 <li>Add a user in the Uchu console (if you're on Windows, the one called Authentication) by typing <code>/adduser username</code> (replacing "username" with what you want your username to be).</li>
                 <li>Optionally, you can give yourself more command permissions using <code>/gamemaster username level</code>. The highest level available is <code>9</code>.</li>
@@ -160,7 +159,7 @@ title: LU Server Projects
                 <li>Add the path to your client's <b>res</b> folder. For example, on Windows this could be: <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
             </ol>
             <p>For help with Uchu, you can join the <a href="https://discord.gg/EFuTB8XZSV" target="_blank"><i class="fab fa-discord"></i> Uchu Community Discord server</a>.</p>
-            <h3>What can I do to help?</h3>
+            <h3 id="how-to-help">What can I do to help?</h3>
             <p> If you have software development experience, you might want to try your hand at helping out one of the open source servers or development utilities linked below. You'll probably want to start out by taking a quick look over the LU Sytems Documentation
                 (either via the original
                 <a href="https://docs.google.com/document/d/1v9GB1gNwO0C81Rhd4imbaLN7z-R0zpK5sYJMbxPP3Kc/">Google Docs</a> or the
@@ -172,52 +171,29 @@ title: LU Server Projects
     <div id="servers" class="py-4">
         <div class="container">
             <h2><i class="fas fa-server"></i> Servers</h2>
-            <hr>
-            <h3>Hosted</h3>
-            
-            <div class="card-deck mx-auto" style="margin-bottom: 30px;">
-                {% for server in site.hosted %}
-                <div class="card">
-                    <h4 class="card-header"> {{ server.name }} </h4>
-                    <img class="card-img-middle" src="{{ server.image_path | absolute_url}}" alt="Card image cap">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: {{ server.status }}</li>
-                        <li class="list-group-item">Language: {{ server.language }}</li>
-                        <li class="list-group-item">Accepting Developers: {{ server.accepting_devs }}</li>
-                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
-                    </ul>
-                    <div class="card-footer">
-                        {% for link in server.links %}
-                        <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <h3>Open Source</h3>
             <div class="card-columns mx-auto">
-                {% for server in site.opensource %}
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> {{ server.name }} </h4>
-                        <div class="card-text"> {{ server.desc }} </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Status: {{ server.status }}</li>
-                        <li class="list-group-item">Language: {{server.language}}</li>
-                        {% if server.devs %}
-                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
-                        {% elsif server.author %}
-                        <li class="list-group-item">Author: {{ server.author }}</li>
-                        {% endif %}
-                    </ul>
-                    <div class="card-footer">
-                        {% for link in server.links %}
-                        <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
-                        {% endfor %}
-                    </div>
+            {% for server in site.opensource %}
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title"> {{ server.name }} </h4>
+                    <div class="card-text"> {{ server.desc }} </div>
                 </div>
-                {% endfor %}
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Status: {{ server.status }}</li>
+                    <li class="list-group-item">Language: {{server.language}}</li>
+                    {% if server.devs %}
+                    <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                    {% elsif server.author %}
+                    <li class="list-group-item">Author: {{ server.author }}</li>
+                    {% endif %}
+                </ul>
+                <div class="card-footer">
+                    {% for link in server.links %}
+                    <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
             </div>
         </div>
     </div>
