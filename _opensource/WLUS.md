@@ -1,8 +1,8 @@
 ---
 name: WLUS
-status: Experimental
+status: Archive
 language: Python
-desc: Currently not being updated
+desc: Wesley's LEGO Universe Server
 links: [['GitHub', 'https://github.com/wesleyd1124/WLUS', 'fab fa-github']]
-devs: Wesley (wescdem)
+author: Wesley (wescdem)
 ---

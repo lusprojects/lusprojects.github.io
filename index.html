@@ -12,16 +12,21 @@ title: LU Server Projects
     <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
     <title>LU Server Projects</title>
     <!-- CSS dependencies -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="neon.css" type="text/css"> </head>
     <style>
+        html {
+            scroll-padding-top: 90px;
+        }
         .card-header:first-child {
             height: 3.5em;
         }
-        #servers .card-img-middle {
-            max-height: 225px;
-            padding: 15px;
+        #servers .card-img {
+            max-height: 175px;
             object-fit: contain;
+        }
+        #servers .card {
+            margin-bottom: 20px;
         }
         .card-link {
             margin: 0 1.25rem;
@@ -37,29 +42,41 @@ title: LU Server Projects
             color:#f1cd31;
             font-weight:bold;
         }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #f5f5f5;
+        }
+        .nav-item.active {
+            font-weight: bold;
+        }
+        .text-muted {
+            color: #ddd !important;
+        }
     </style>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-info" style="font-weight: bold; position: fixed; width: 100%; z-index: 100;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info" style="position: fixed; width: 100%; z-index: 100;">
         <div class="container">
-            <a class="navbar-brand" href="#home" style="font-size: 200%;">LUSP</a>
+            <a class="navbar-brand" href="#home" style="font-weight: bold; font-size: 200%;">LUSP</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse text-center" id="navbar2SupportedContent" style="font-size: 130%;">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home
+                        <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#faqs">FAQs</a>
+                        <a class="nav-link" href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#development-resources">Development Resources</a>
+                        <a class="nav-link" href="#servers"><i class="fas fa-server"></i> Servers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact-community">Community/Contact</a>
+                        <a class="nav-link" href="#development-resources"><i class="fas fa-tools"></i> Development Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-community"><i class="fas fa-users"></i> Community/Contact</a>
                     </li>
                 </ul>
             </div>
@@ -77,13 +94,13 @@ title: LU Server Projects
     </div>
     <div id="faqs" class="py-4">
         <div class="container">
-            <h2>FAQs</h2>
+            <h2><i class="fas fa-question-circle"></i> FAQs</h2>
             <hr>
             <h3 id="what-is-lusp">What are LU Server Projects?</h3>
             <p> This community of projects aims to provide the capability to play the LEGO® Universe MMO, shuttered in February 2012 after a roughly one year run, through emulating the original servers. This is done thanks to the hard work of many fans in
                 reverse engineering packet captures and the game client, and also opens up the possibility for further creativity through customization by dedicated fans. </p>
-            <h3>Where can I get in touch with other fans, developers, and community members? Where can I ask questions</h3>
-            <p> Please see <a href="#contact-community">Community/Contact</a> </p>
+            <h3>Where can I get in touch with other fans, developers, and community members? Where can I ask questions?</h3>
+            <p> Please see <a href="#contact-community"><i class="fas fa-users"></i> Community/Contact</a> </p>
             <h3 id="history">How did it all start?</h3>
             <p> Around the time of the games closure, Pwjones was able to capture a significant volume of packets from the live LU servers, which were then able to be decrypted by Humanoid, who also wrote the very first server prototype playing back these
                 captures. Not soon thereafter, the community began to overhype the little that was available in this implementation, and due to various reasons multiple fractures developed among the community. Multiple groups formed to work on furthering
@@ -141,19 +158,19 @@ title: LU Server Projects
                 We will update this information at that point. Until then, you may be interested in setting up Uchu:
             </p>
             <ol>
-                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu-Tool</a> and extract the zip file</li>
-                <li>Run Uchu.Tool.exe. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
-                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a> and extract it into your LU client folder. Make sure the mods folder is in the same folder as legouniverse.exe.</li>
-                <li>Open the boot.cfg in the LEGO Universe Client folder and change AUTHSERVERIP to read <code>AUTHSERVERIP=0:localhost,</code> (this may already be the case depending on the client)</li>
+                <li>Download <a href="https://github.com/UchuServer/UchuTool/releases/latest">Uchu Tool</a> and extract the zip file.</li>
+                <li>Run <b>Uchu.Tool.exe</b>. Wait for it to download and start Uchu. This tool will also automatically check for and install updates when you run it.</li>
+                <li>Download the <a href="https://github.com/lcdr/raknet_shim_dll/releases/latest">Network Protocol mod</a> and extract it into your LEGO Universe client folder. Make sure the <b>mods</b> folder is in the same folder as <b>legouniverse.exe</b>.</li>
+                <li>Open <b>boot.cfg</b> in the LEGO Universe Client folder and change the line starting with <code>AUTHSERVERIP</code> to read <code>AUTHSERVERIP=0:localhost,</code> (this may already be the case depending on the client).</li>
                 <li>Add a user in the Uchu console (if you're on Windows, the one called Authentication) by typing <code>/adduser username</code> (replacing "username" with what you want your username to be).</li>
                 <li>Optionally, you can give yourself more command permissions using <code>/gamemaster username level</code>. The highest level available is <code>9</code>.</li>
-                <li>Launch LEGO Universe</li>
+                <li>Launch LEGO Universe (<b>legouniverse.exe</b>).</li>
             </ol>
-            <p>If Uchu can't find the client resources</p>
+            <p>If Uchu can't find the client resources:</p>
             <ol>
-                <li>Go to the uchu folder that should be in the same folder as Uchu.Tool.exe</li>
-                <li>Open config.xml using a text editor and locate <code>&lt;GameResourcesFolder&gt;path to res&lt;/GameResourcesFolder&gt;</code></li>
-                <li>Add your client res folder, for example it should look like this <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
+                <li>Go to the <b>uchu</b> folder, which is in the same folder as <b>Uchu.Tool.exe</b>.</li>
+                <li>Open <b>config.xml</b> using a text editor and locate <code>&lt;GameResourcesFolder&gt;path to res folder&lt;/GameResourcesFolder&gt;</code></li>
+                <li>Add the path to your client's <b>res</b> folder. For example, on Windows this could be: <code>&lt;GameResourceFolder&gt;C:\Users\Bob\LEGO Universe\res&lt;/GameResourceFolder&gt;</code></li>
             </ol>
             <p>For help with Uchu, you can join the <a href="https://discord.gg/EFuTB8XZSV" target="_blank"><i class="fab fa-discord"></i> Uchu Community Discord server</a>.</p>
             <h3 id="how-to-help">What can I do to help?</h3>
@@ -167,36 +184,42 @@ title: LU Server Projects
     </div>
     <div id="servers" class="py-4">
         <div class="container">
-            <h2>Servers</h2>
+            <h2><i class="fas fa-server"></i> Servers</h2>
+            <hr>
             <div class="card-columns mx-auto">
-            {% for server in site.opensource %}
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title"> {{ server.name }} </h4>
-                    <div class="card-text"> {{ server.desc }} </div>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Status: {{ server.status }}</li>
-                    <li class="list-group-item">Language: {{server.language}}</li>
-                    {% if server.devs %}
-                    <li class="list-group-item">Active Devs: {{ server.devs }}</li>
-                    {% elsif server.author %}
-                    <li class="list-group-item">Author: {{ server.author }}</li>
+                {% for server in site.opensource %}
+                <div class="card">
+                    {% if server.image_path %}
+                    <img class="card-img" src="{{ server.image_path | absolute_url}}" alt="Logo of {{ server.name }}">
                     {% endif %}
-                </ul>
-                <div class="card-footer">
-                    {% for link in server.links %}
-                    <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
-                    {% endfor %}
+                    <div class="card-body">
+                        <h4 class="card-title"> {{ server.name }} </h4>
+                        <div class="card-text"> {{ server.desc }} </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Status: {{ server.status }}</li>
+                        <li class="list-group-item">Language: {{server.language}}</li>
+                        {% if server.devs %}
+                        <li class="list-group-item">Active Devs: {{ server.devs }}</li>
+                        {% elsif server.author %}
+                        <li class="list-group-item">Author: {{ server.author }}</li>
+                        {% elsif server.authors %}
+                        <li class="list-group-item">Authors: {{ server.authors }}</li>
+                        {% endif %}
+                    </ul>
+                    <div class="card-footer">
+                        {% for link in server.links %}
+                        <a href="{{ link[1] }}" class="card-link" target="_blank"><i class="{{ link[2] }}"></i>  {{ link[0] }}</a>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>
     <div id="development-resources" class="py-4">
         <div class="container">
-            <h2>Development Resources</h2>
+            <h2><i class="fas fa-tools"></i> Development Resources</h2>
             <hr>
             <div>
                 <ul class="list-inline">
@@ -231,11 +254,11 @@ title: LU Server Projects
     </div>
     <div id="contact-community" class="py-4">
         <div class="container">
-            <h2>Community and Contact</h2>
+            <h2><i class="fas fa-users"></i> Community and Contact</h2>
             <hr>
             <ul>
-                <li> For general discussion and questions, many fans and developers alike have congregated on the <a href="https://discord.gg/jhTwGqYSKk">LEGO Universe Community Hub Discord server</a>. </li>
-                <li> For this site and its specific contents, please see the <a href="https://github.com/lusprojects/lusprojects.github.io">GitHub repository</a> - feel free to <a href="https://github.com/lusprojects/lusprojects.github.io/issues">file an issue</a>. </li>
+                <li> For general discussion and questions, many fans and developers alike have congregated on the <a href="https://discord.gg/jhTwGqYSKk"><i class="fab fa-discord"></i> LEGO Universe Community Hub Discord server</a>. </li>
+                <li> For this site and its specific contents, please see the <a href="https://github.com/lusprojects/lusprojects.github.io"><i class="fab fa-github"></i> GitHub repository</a> - feel free to <a href="https://github.com/lusprojects/lusprojects.github.io/issues">file an issue</a>. </li>
                 <li> For individual projects, see the information in the relevant sections (<a href="#servers">Servers</a> or <a href="#development-resources">Development Resources</a>). </li>
             </ul>
         </div>
@@ -262,25 +285,55 @@ title: LU Server Projects
                 activeTag = "";
             }
         }
+
         function showAll()
         {
             $("[data-tag]").show();
             $("[data-tagbtn]").removeClass("active");
             $("#All_tag").toggleClass("active");
         }
+
         function navigate() {
+            // Get anchor to scroll to
             var hash = $(this).attr('href');
-            $('html,body').animate({
-                'scrollTop': $(hash).offset().top
+            // Scroll with a smooth animation
+            $('html, body').animate({
+                'scrollTop': $(hash).offset().top - menuHeight
             }, 1000);
-            $('.active').removeClass('active');
-            var asr = $('#active-sr').remove();
-            var active = $('[href="' + hash + '"]');
-            active.append(asr);
-            active.addClass('active');
         }
 
         $('nav a').click(navigate);
+
+        const menu = $('nav');
+        const menuHeight = $('nav').outerHeight();
+        const menuItems = menu.find('a.nav-link');
+
+        // get anchors
+        const anchorItems = menuItems.map(function() {
+            return $($(this).attr('href'));
+        }).filter(function() {
+            return $(this).length == 1;
+        });
+
+        $(window).scroll(function(e) {
+            // current scroll distance from top
+            const distanceFromTop = this.scrollY;
+
+            // find out which anchors have been scrolled past
+            passedElements = anchorItems.filter(function() {
+                return $(this).offset().top <= distanceFromTop + menuHeight + 10;
+            });
+
+            // get the last one
+            lastPassedElement = passedElements[passedElements.length - 1];
+            id = lastPassedElement?.attr('id')
+
+            // set the correct menu item as active
+            menuItem = menuItems.filter(`[href="#${id}"]`);
+            menuItems.parent().filter('.active').removeClass('active');
+            menuItem.parent().addClass('active');
+        });
+
         try {
             navigate($('[href="' + window.location.hash + '"]'));
         } catch(e){}

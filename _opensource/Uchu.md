@@ -1,8 +1,9 @@
 ---
 name: Uchū
-status: Active
+status: Active Development
 language: C#
-desc: LEGO Universe server written in C#
+image_path: assets/uchu.png
+desc: LU server written in C#, with Python scripting support
 links: [['GitHub', 'https://github.com/UchuServer/Uchu', 'fab fa-github'], ['Community Discord', 'https://discord.gg/EFuTB8XZSV', 'fab fa-discord']]
-devs: TheNexusAvenger, enteryournamehere, Frozenreflex
+devs: Fro Zen, TecCheck, TheNexusAvenger, zaop
 ---
